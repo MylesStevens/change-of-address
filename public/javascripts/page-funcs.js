@@ -112,11 +112,25 @@ function answer(element) {
 	}
 }
 
-function decision(element) {
+function decision(element, flow, conditions) {
+	/*
+	if((flow == null || flow.length == 0) || (conditions == null || conditions.length == 0)) {
+		alert('ERROR: You have not used the decision tree properly!');
+		return;
+	} else {
+		alert('Current Flow: ['+flow+'], Conditions: ['+conditions+']');
+	}
+	*/
+	
+	// If we don't have page validation turned on, we use the first decision.
 	if((page.validate == "false") && (page.state.length == 0)) {
-		page.state = '1';
+		page.state = 1;
+		if(find_decision(page.state) == null) {
+			page.state = flow+'-1';
+		}
 	}
 
+	// Execute the decision we need to progress to the next screen.
 	for(var i=0; i < page.decisions.length; i++) {
 		var decision = page.decisions[i];
 		if(decision.id == page.state) {
@@ -136,6 +150,16 @@ function decision(element) {
 }
 
 // JSON helper functions
+function find_decision(decision_id) {
+	for(var d=0; d < page.decisions.length; d++) {
+		var decision = page.decisions[d];
+		if(decision.id == decision_id) {
+			return decision;
+		}
+	}
+	return null;
+}
+
 function find_question(question_id) {
 	for(var q=0; q < page.questions.length; q++) {
 		var question = page.questions[q];
