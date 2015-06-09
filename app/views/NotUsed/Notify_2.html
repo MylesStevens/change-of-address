@@ -1,0 +1,161 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+
+  function FindAddress2() { 
+    window.location.href = "Options.html";
+  }
+ 
+</script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+<h1 class="form-title heading-medium">
+      Verify your identity
+    </h1> 
+
+
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+    <p>
+     This is a secure service for notifying DVLA of a medical condition.</p>
+    
+</div>
+</div>
+
+
+ <form id="form1" action="2COA_2" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-label" for="drivernumber">
+        Your driving licence number</label>
+        <span class="form-hint">
+          For example, 'MORGA657054SM9IJ'
+           </span>
+        
+           <input type="text" class="form-control" id="drivernumber" name="housenum">
+           <br>
+           <p><a href="/">Where to find this</a></p>
+      </div>
+    
+
+    
+    <div class="form-group">
+       <label class="form-label" for="drivernumber">
+        Your National Insurance number</label>
+        
+                 <span class="form-hint">
+          For example, 'QQ123456C'
+           </span>
+        
+           <input type="text" class="form-control" id="drivernumber" name="housenum">
+           <br>
+           <p><a href="/">Where to find this</a></p>
+      </div>
+
+
+    <div class="form-group">
+       <label class="form-label" for="drivernumber">
+        Your Postcode</label>
+        
+                 <span class="form-hint">
+          For example, 'EH19SP'
+           </span>
+        
+           <input type="text" class="form-control" id="drivernumber" name="postcode">
+          <!--  <br>
+           <p><a href="/">Where to find this</a></p> -->
+      </div>
+
+
+    <div class="grid-row"> </div>
+
+    
+    <div class="dwp-permission-group">
+            <label><input type="checkbox" id="dwpPermission" name="dwpPermission" value="1">
+                By ticking this box, you are providing the Driver and Vehicle Licensing Agency (DVLA) with your consent to check your personal details including your National Insurance number with the Department for Work and Pensions and Her Majesty's Revenue and Customs to help verify your identity.<br>
+                For more information on how the DVLA will use your information and the alternative ways of accessing this service please see our privacy policy.
+            </label>
+        </div>
+       
+
+<p class ="validation-message" id="postcodeerror"> </p>
+  
+           <p class="fields"><input name="Findaddress1" type="button" class="button" value="Continue" onclick="FindAddress2()">
+
+     <!-- <div class="validation-message">
+          <p class="validation-message">{{err}}</p>
+    </div> -->
+    <!-- Primary buttons, secondary links -->
+     <!-- <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="postcode">
+        Find Address
+    </button> -->
+    
+  </form>  
+    
+      <ul>
+        <!-- <li><a href="#">Skip this section for now</a></li> -->
+        <li><a href="javascript:window.history.go(-1);">Back</a></li>
+      </ul>
+    
+
+    
+
+    <details>
+    <summary><span class="summary">I don’t know what postcode to use</span></summary>
+    <div class="panel-indent">
+     <p>
+          If you can’t find your postcode on a letter or other document, try entering your address into a search engine website.
+        </p>
+        <h4>If you have more than one address</h4>
+        <p>
+          It’s sometimes possible to register at two addresses (though you can only vote once in any election).
+        </p>
+        <p>
+          For example, if you’re a student living away from home, you may be able to register at both your home and term time addresses.
+        </p>
+        <p>
+          If you want to register at two addresses, make two separate applications through this service. Your local Electoral Registration Office will look at each application and tell you whether you’re allowed to register.
+        </p>
+        <h4>If you don’t have a permanent address</h4>
+        <p>
+          If you’re homeless and living in temporary accommodation (for example, a long term hostel), use that address.
+        </p>
+        <p>
+          If you’re a long term patient in a psychiatric hospital, use the address of the hospital.
+        </p>
+        
+      
+    </div>
+  </details>
+
+
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -1,0 +1,81 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+
+<header>
+
+  <script>
+  function nextscreen() { 
+
+    window.location.href ="Epilepsy_1.html";
+
+  }
+  
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+<h2 class="form-title heading-medium">
+      Your <em class="highlight">diabetes</em>
+    </h2> 
+
+ 
+
+  
+
+    <h1 class="form-title heading-medium">
+      When was the last time you visited your consultant/clinic? {{ROUTECHOICE}}
+    </h1>
+         
+      
+ <form id="form1"  action="Notify6a" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-label" for="postcode">
+        Date<span class="form-hint">
+          For example, 'June 2014'
+           </span>
+           <input type="Month" class="form-control-1-4" id="housenum" name="housenum" value="">
+          <br>
+      </label>
+    </div>
+    
+
+           <div class="form-group">
+      <input name="Findaddress4" type="Submit" class="button" value="Continue"> 
+  
+    
+    </form>  
+    
+      <ul>
+      
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

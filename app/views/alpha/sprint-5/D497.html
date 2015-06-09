@@ -1,0 +1,312 @@
+
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function showcar() { 
+
+    if (cary.style.display == "block"){
+    cary.style.display = "none";
+
+  }else{
+    cary.style.display = "block";
+  }
+}
+
+   function showbike() { 
+
+    if (bike.style.display == "block"){
+    bike.style.display = "none";
+
+  }else{
+    bike.style.display = "block";
+  }
+}
+
+   function showtrike() { 
+
+    if (trikey.style.display == "block"){
+    trikey.style.display = "none";
+
+  }else{
+    trikey.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+
+function next() { 
+  window.location.href ="another-condition?flow={{flow}}&conditions={{conditions}}";
+}
+
+</script>
+
+</header>
+
+<main id="page-container" role="main">
+
+ <div class="grid-row border-bottom" >
+  <h1 class="form-title heading-medium">
+      Your vehicle's special controls {{ROUTECHOICE}}
+    </h1> 
+   <div class="column-full">
+
+    
+    <p>Select the type of vehicles that you drive that are specially adapted as a resut of your condition/s</p>
+
+<form action="summary" method="get" class="form inline">
+ <fieldset>
+    
+    
+
+    <label class="block-label" for="checkbox-1">
+      <input id="checkbox-1" type="checkbox" value="car" onclick="showcar()">
+      Car, bus or lorry
+
+    </label>
+    <label class="block-label" for="checkbox-2">
+      <input id="checkbox-2" type="checkbox" value="motorcyle" onclick="showbike()">
+      Motorcycle 
+    </label>
+    <label class="block-label" for="checkbox-3">
+      <input id="checkbox-3" type="checkbox" value="trike" onclick="showtrike()">
+     Moped or trike
+    </label>
+  </fieldset>
+</div>
+</div>
+
+<div class="starthidden" id="cary">
+<H3 class="heading-small">Car, bus or lorry</H3>
+    <p class="form-hint">Select all that apply</p>
+
+ <div class="grid-row border-bottom" >
+  <div class="column-third">
+      <fieldset>
+    
+    <label class="block-label" for="checkbox-4">
+      <input id="checkbox-4" type="checkbox" value="car">
+        Combined braking and accelerator system
+      </label>
+
+    <label class="block-label" for="checkbox-5">
+      <input id="checkbox-5" type="checkbox" value="motorcyle">
+       Modified accelerator system 
+    </label>
+
+    <label class="block-label" for="checkbox-6">
+      <input id="checkbox-6" type="checkbox" value="trike">
+      Modified rear view mirror    
+    </label>
+  </fieldset>
+</div>
+
+<div class="column-third">
+  <fieldset>
+    
+    <label class="block-label" for="checkbox-7">
+      <input id="checkbox-7" type="checkbox" value="car">
+        Modified braking system
+    </label>
+
+    <label class="block-label" for="checkbox-8">
+      <input id="checkbox-8" type="checkbox" value="motorcyle">
+       Modified clutch
+    </label>
+
+    <label class="block-label" for="checkbox-9">
+      <input id="checkbox-9" type="checkbox" value="trike">
+      Modified control layouts   
+    </label>
+
+  </fieldset>
+</div>
+
+<div class="column-third">
+    <fieldset>
+    
+    <label class="block-label" for="checkbox-10">
+      <input id="checkbox-10" type="checkbox" value="car">
+        Modified driver seat
+    </label>
+
+    <label class="block-label" for="checkbox-12">
+      <input id="checkbox-12" type="checkbox" value="motorcyle">
+      Modified steering
+    </label>
+
+    <label class="block-label" for="checkbox-13">
+      <input id="checkbox-13" type="checkbox" value="trike">
+      Modified transmission  
+    </label>
+
+  </fieldset>
+</div>
+
+</div>
+</div>
+
+<div class="starthidden" id="bike">
+<H3 class="heading-small">Motorcycle</H3>
+    <p class="form-hint">Select all that apply</p>
+
+
+<div class="grid-row border-bottom">
+  
+    <div class="column-third">
+      <fieldset>
+    
+    <label class="block-label" for="checkbox-21">
+      <input id="checkbox-21" type="checkbox" value="car">
+        Adjusted commands
+      </label>
+
+    <label class="block-label" for="checkbox-22">
+      <input id="checkbox-22" type="checkbox" value="motorcyle">
+       Adjusted foot operated brake
+    </label>
+
+    <label class="block-label" for="checkbox-23">
+      <input id="checkbox-23" type="checkbox" value="trike">
+      Adjusted hand operated brake    
+    </label>
+  </fieldset>
+</div>
+
+<div class="column-third">
+  <fieldset>
+    
+    <label class="block-label" for="checkbox-41">
+      <input id="checkbox-41" type="checkbox" value="car">
+        Adjusted manual transmission and clutch
+    </label>
+
+    <label class="block-label" for="checkbox-42">
+      <input id="checkbox-42" type="checkbox" value="motorcyle">
+      Only with sidecar
+    </label>
+
+    
+</div>
+
+<div class="column-third">
+    <fieldset>
+    
+    <label class="block-label" for="checkbox-51">
+      <input id="checkbox-51" type="checkbox" value="car">
+        Single operated brake
+    </label>
+    
+    <label class="block-label" for="checkbox-53">
+      <input id="checkbox-53" type="checkbox" value="trike">
+      Seat height </label> 
+
+  </fieldset>
+  <div class="form-hint">allows driver in a seated position to have contact with the ground </div>
+    
+
+ 
+</div>
+</div>
+</div>
+
+
+<div class="starthidden" id="trikey">
+
+<H3 class="heading-small">Moped or trike</H3>
+    <p class="form-hint">Select all that apply</p>
+
+
+<div class="grid-row border-bottom" >
+  
+    <div class="column-third">
+      <fieldset>
+    
+    <label class="block-label" for="checkbox-61">
+      <input id="checkbox-61" type="checkbox" value="car">
+        Adjusted foot operated brake
+      </label>
+
+    <label class="block-label" for="checkbox-62">
+      <input id="checkbox-62" type="checkbox" value="motorcyle">
+       Adjusted hand operated brake
+    </label>
+
+    <label class="block-label" for="checkbox-63">
+      <input id="checkbox-63" type="checkbox" value="trike">
+      Adjusted manual transmission and clutch   
+    </label>
+  </fieldset>
+</div>
+
+<div class="column-third">
+  <fieldset>
+    
+    <label class="block-label" for="checkbox-71">
+      <input id="checkbox-71" type="checkbox" value="car">
+        Only with sidecar
+    </label>
+
+    <label class="block-label" for="checkbox-72">
+      <input id="checkbox-72" type="checkbox" value="motorcyle">
+      Single operated brake
+    </label>
+
+    
+</div>
+
+  </fieldset>
+</div>
+</div>
+
+</div>
+
+
+
+    
+    
+
+
+<div class="grid-row column-full form-group">
+ <br>
+ <br>
+ 
+    
+ <input type="button" id="continue" class="button" name="continue" value="Continue" onclick="next()"/>
+
+
+</form>
+
+<form action="{{next}}">
+
+ <a class="back-to-previous" href="javascript:history.go(-1);">
+    <i class="fa fa-angle-left"></i>
+    Back <span class="visuallyhidden"> to the previous question</span>
+</a> 
+
+</form>
+</div>
+ </main>
+
+ {{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
+

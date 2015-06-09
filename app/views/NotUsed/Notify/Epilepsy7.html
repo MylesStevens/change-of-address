@@ -1,0 +1,200 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+  <script>
+  function shownext() { 
+    noclickedVar ="no";
+    form1.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function FindAddress2() { 
+if (noclickedVar =="yes"){
+
+
+
+    window.location.href ="Notify_7.html";
+  } else{
+    var locky = "Epilepsy7a.html";
+    window.location.href =locky;}
+
+}
+
+  
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+  <script>
+  var noclickedVar="no";
+
+  function noclicked() {
+  noclickedVar ="yes";
+
+}
+
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+
+
+
+  
+
+    
+
+<form>
+ <div class="grid-row">
+    <div class="column-full">
+
+      <h1 class="form-title heading-medium">
+      Tell us about any consultants/clincs you visit
+
+    </h1>
+
+      <label class="form-label">Do you see a consultant or visit a clinic for your <em class="hilight">Epilepsy</em>?
+
+      
+<div class="form-group">
+  <label class="block-label" for="radio-1">
+    <input id="radio-1" type="radio" name="radio-group1" value="Yes" onclick="shownext()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-2">
+    <input id="radio-2" type="radio" name="radio-group1" value="No" onclick="noclicked()">
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+  
+</form>
+
+<form id="form1" action="Notify_6a.html" method="get" class="form starthidden">
+
+
+       
+
+ 
+   
+    <div class="form-group">
+
+      <h1 class="form-title heading-small">
+      The consultant/clinic details
+    </h1>
+
+       <label class="form-label" for="postcode">
+        Name of consultant
+        <span class="form-hint">
+          For example, 'Dr. Otto Octavius' 
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    <div class="form-group">
+       <label class="form-label" for="postcode">
+        Name clinic/hospital
+        <span class="form-hint">
+          For example, 'Morriston Hospital'
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="postcode">
+        Postcode
+        <span class="form-hint">
+          This is the postcode as it appears in the address
+          <br>
+          For example, 'SA5 8ET'
+          </span>
+           <input type="text" class="form-control" id="postcode" name="postcode">
+        </label>
+      
+    </div>
+    </form>  
+
+<p class ="validation-message" id="postcodeerror"> </p>
+  
+           <p class="fields"><input name="Findaddress1" type="button" class="button" value="Contine" onclick="FindAddress2()">
+
+     <!-- <div class="validation-message">
+          <p class="validation-message">{{err}}</p>
+    </div> -->
+    <!-- Primary buttons, secondary links -->
+     <!-- <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="postcode">
+        Find Address
+    </button> -->
+    
+  
+    
+      <ul>
+        <!-- <li><a href="#">Skip this section for now</a></li> -->
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    <!-- <details>
+    <summary><span class="summary">I don’t know what postcode to use</span></summary>
+    <div class="panel-indent">
+     <p>
+          If you can’t find your postcode on a letter or other document, try entering your address into a search engine website.
+        </p>
+        <h4>If you have more than one address</h4>
+        <p>
+          It’s sometimes possible to register at two addresses (though you can only vote once in any election).
+        </p>
+        <p>
+          For example, if you’re a student living away from home, you may be able to register at both your home and term time addresses.
+        </p>
+        <p>
+          If you want to register at two addresses, make two separate applications through this service. Your local Electoral Registration Office will look at each application and tell you whether you’re allowed to register.
+        </p>
+        <h4>If you don’t have a permanent address</h4>
+        <p>
+          If you’re homeless and living in temporary accommodation (for example, a long term hostel), use that address.
+        </p>
+        <p>
+          If you’re a long term patient in a psychiatric hospital, use the address of the hospital.
+        </p>
+        
+    </div>
+  </details> -->
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

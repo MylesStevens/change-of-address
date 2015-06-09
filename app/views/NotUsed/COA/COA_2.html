@@ -1,0 +1,140 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+<!--   <a href="/" class="example-back-link">Back</a>
+<h1 class="form-title heading-medium">
+      Current details
+    </h1>
+ 
+        
+<div>
+          <h3>Address</h3>
+          <div class="data-wrap">
+            <p>142 Mapledene Road<br>London<br>E8 3LL</p>
+          </div>
+        </div>
+        <div>
+    
+</div>  -->
+
+
+  <form action="COA_4" method="NULL" class="form">
+
+    <h1 class="form-title heading-medium">
+      What is your new address?
+    </h1>
+
+
+    <div class="form-group">
+        <label class="form-label" for="full-name-f1">Postcode</label>
+        <span style="font-size:24px; font-weight: bold">
+         SA5 8ET</span>
+           
+          <div><a style="vertical-align: text-bottom;" href="COA1">Change</a></div>
+         
+
+
+      </label>
+      
+    </div>
+
+    <fieldset>
+
+    <label for="address_uprn">
+      <span class="visuallyhidden">Select your </span>Address
+    </label>
+</fieldset>
+
+    <div >
+            <select class="form-control-dropdown " id="address_uprn" name="address.uprn"  data-validation-name="addressSelect" data-validation-type="field" data-validation-rules="nonEmpty"   style="display:inline-block;">
+                <option style="font-weight: bold;" value="">31 addresses found</option>
+                <option value="100100348488">Myrtle Grove, Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348480">240 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348481">241 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348482">242 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348483">244 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348484">245 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348485">246 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348486">247 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348487">248 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348489">250 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348490">251 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348491">252 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348492">253 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348493">254 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348494">255 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348495">256 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348496">257 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348497">258 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348498">259 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348499">260 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348500">261 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348501">262 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348502">263 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348503">264 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348504">265 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348505">266 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348506">267 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348507">268 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348508">269 Middle Road, Cwmdu, Swansea</option>
+                <option value="10010056990">Flat, 271 Middle Road, Cwmdu, Swansea</option>
+                <option value="100100348510">273 Middle Road, Cwmdu, Swansea</option>
+            </select>
+        </div>
+
+ 
+<br>
+    <a href="COA_3" class="toggle">
+      I can’t find my address in the list<span class="visuallyhidden"> section</span>
+    </a>
+
+    
+
+
+
+
+
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="country"  >
+        Continue
+    </button>
+    
+   
+    
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

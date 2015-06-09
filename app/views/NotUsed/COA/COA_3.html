@@ -1,0 +1,104 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+
+
+
+
+    <h1 class="form-title heading-medium">
+      What is your new address?
+    </h1>
+
+
+
+    <div class="form-group">
+        <label class="form-label" for="full-name-f1">Postcode</label>
+        <span style="font-size:24px; font-weight: bold">
+         SA5 8ET</span>
+           
+          <div><a style="vertical-align: text-bottom;" href="COA1">Change</a></div>
+              
+    </div>
+  <div class="validation-wrapper">
+    <fieldset>
+
+    
+
+
+
+ 
+<form action="COA_4" method="NULL" class="form">
+      <label class="form-label" for="Adress">
+        Address
+        <span class="form-hint">
+          Enter your address here as you expect to see it
+          
+        </span>
+      </label>
+      <div class="validation-wrapper">
+      <p><input type="text" class="form-control" id="Address1"></p>
+      <p><input type="text" class="form-control" id="Address2"></p>
+      <p><input type="text" class="form-control" id="Address3"></p>
+      <p><label class="form-label" for="Adress">
+        Town or City
+        </label>
+     <input type="text" class="form-control" id="City"></p>
+    </div>
+
+    
+    </fieldset>
+</div>
+    <!-- <div class="validation-message visible"><a href="https://www.registertovote.service.gov.uk/register-to-vote/address/manual#address_manualAddress_lineOne">Please answer this question</a></div> --><!-- <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="addressManual">
+        Continue_validate
+    </button>  -->
+
+
+
+
+
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="country"  >
+        Continue
+    </button>
+    
+   
+    
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+</form>
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

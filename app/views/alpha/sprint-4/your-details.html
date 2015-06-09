@@ -1,0 +1,82 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+</header>
+
+<main id="page-container" role="main">
+
+    <h1 class="form-title heading-medium">
+<!--       Your driver number      
+ -->
+    </h1>
+
+ <form id="form1" action="condition.html" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-title heading-medium" for="drivernum">
+        
+        Your driver number </label>
+        <span class="form-hint">
+          For example, 'MORGA753116SM9IJ'
+           </span>
+           <input type="text" maxlength="16" class="form-control" id="drivernumber"  >
+          <br>
+      
+    </div>
+    <details>
+        <summary><span class="summary">Where to find your driver number</span></summary>
+
+ 
+        <div class="panel-indent">
+          <p>Your driving licence number can be found in section 5 of your driving licence photocard</p>
+          <img id="whatLicenceImg" src="/public/images/driving_licence.png" alt="">
+
+          
+        </div>    
+   
+     </details>
+
+     <p></p>
+       <a href="/alpha/notify/your-details-nodrivernumber.html">I don't know my driver number</a>
+
+<div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="" >
+        Confirm
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+    
+
+    
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

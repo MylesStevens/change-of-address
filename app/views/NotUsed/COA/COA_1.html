@@ -1,0 +1,110 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+
+
+
+
+  
+
+    <h1 class="form-title heading-medium">
+      What is your new address?
+    </h1>
+
+
+ <form action="COA_2" method="NULL" class="form">
+    <div class="form-group">
+      <label class="form-label-bold" for="postcode">
+        Postcode
+        <span class="form-hint">
+          This is your postcode as it appears in your address
+          <br>
+          For example, 'SA5 8ET'.
+        </span>
+      </label>
+      <input type="text" class="form-control" id="postcode">
+    </div>
+
+
+
+     <!-- <div class="validation-message">
+        Sorry – we couldn’t find any addresses for that postcode
+    </div> -->
+
+
+
+
+    <!-- Primary buttons, secondary links -->
+     <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="country"  >
+        Find Address
+    </button>
+    
+  </form>  
+    
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    <details>
+    <summary><span class="summary">I don’t know what postcode to use</span></summary>
+    <div class="panel-indent">
+     <p>
+          If you can’t find your postcode on a letter or other document, try entering your address into a search engine website.
+        </p>
+        <h4>If you have more than one address</h4>
+        <p>
+          It’s sometimes possible to register at two addresses (though you can only vote once in any election).
+        </p>
+        <p>
+          For example, if you’re a student living away from home, you may be able to register at both your home and term time addresses.
+        </p>
+        <p>
+          If you want to register at two addresses, make two separate applications through this service. Your local Electoral Registration Office will look at each application and tell you whether you’re allowed to register.
+        </p>
+        <h4>If you don’t have a permanent address</h4>
+        <p>
+          If you’re homeless and living in temporary accommodation (for example, a long term hostel), use that address.
+        </p>
+        <p>
+          If you’re a long term patient in a psychiatric hospital, use the address of the hospital.
+        </p>
+        <p>
+          If you’re a prisoner on long term remand, use the address of the prison.
+        </p>
+        <h4>If you can’t provide an address</h4>
+        <p>
+          If you can’t provide an address, contact <a href="https://www.gov.uk/get-on-electoral-register">your local Electoral Registration Office</a> for advice.
+        </p>
+    </div>
+  </details>
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

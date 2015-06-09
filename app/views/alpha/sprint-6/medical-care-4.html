@@ -1,0 +1,83 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<main id="page-container" role="main">
+
+  <form id="medical-form" class="form">
+
+    <h1 class="form-title heading-medium">
+      Confirm your consultants details
+    </h1>
+
+    <div id="q13">
+      <label class="form-label" for="q13-answer">
+        Consultant's Address
+        <span class="form-hint">Amend address if needed and Confirm</span>
+      </label>
+      <div class="validation-wrapper">
+        <p><input id="q13-a1" name="q13-a1" type="text" class="form-control" value="Dr Gregory House" onkeyup="answer(this)"></p>
+        <p><input id="q13-a2" name="q13-a2" type="text" class="form-control" value="Diabetes Clinic"></p>
+        <p><input id="q13-a3" name="q13-a3" type="text" class="form-control" value="Morriston Hospital"></p>
+        <p><input id="q13-a4" name="q13-a4" type="text" class="form-control" value="Heol Maes Eglwys" ></p>
+        <p><input id="q13-a5" name="q13-a5" type="text" class="form-control" value="SWANSEA"></p>
+        <p><input id="q13-a6" name="q13-a6" type="text" class="form-control" value="SA6 6NL"></p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input id="continue" name="continue" type="button" class="button" value="Confirm Address" onclick="decision(this,'{{flow}}','{{conditions}}')"/> 
+    </div>
+
+    <ul>
+      <li><a href="javascript:history.go(-1);">Back</a></li>
+    </ul>
+
+  </form>
+
+<script>
+
+  var data = {
+    state: "",
+    validate: "false",
+    questions: [
+      {id: "q13", type: "text", active: "true", answers: [
+          {id: "q13-a1", value: "", show: [], hide: [], decision: "{{flow}}-1"},
+          {id: "q13-a2", value: "", show: [], hide: [], decision: "{{flow}}-1"},
+          {id: "q13-a3", value: "", show: [], hide: [], decision: "{{flow}}-1"},
+          {id: "q13-a4", value: "", show: [], hide: [], decision: "{{flow}}-1"},
+          {id: "q13-a5", value: "", show: [], hide: [], decision: "{{flow}}-1"},
+          {id: "q13-a6", value: "", show: [], hide: [], decision: "{{flow}}-1"}
+        ]
+      }
+    ],
+    decisions: [
+      {id: "diabetes-1", description: "q13: All", message: "", redirect: "eyesight-treatment?flow={{flow}}&conditions={{conditions}}&path={{path}}"},
+      {id: "glaucoma-1", description: "q13: All", message: "", redirect: "another-condition?flow={{flow}}&conditions={{conditions}}&path={{path}}"}
+    ]
+  };
+
+  initialise(data);
+
+</script>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -1,0 +1,117 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+var postcodeV = document.forms["form1"]["postcode"].value;
+
+if (postcodeV ==""){
+document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+}
+else{
+
+
+    window.location.href ="Notify_5.html";
+  }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+
+
+
+  
+
+    <h1 class="form-title heading-medium">
+      Who do you regularly see for your diabetes care? 
+{{ROUTECHOICE2}}
+    </h1>
+
+        <span class="form-hint"></span>
+
+
+<div class="grid-row">
+   <div class="column-half ">
+<form action="conadd1" method="get" class="form">
+ <fieldset >
+    
+    
+
+    <label class="block-label " for="checkbox-1">
+      <input id="checkbox-1" type="checkbox" onclick="" name="exinfo1" value="{{ROUTECHOICE2}}">
+      Consultant
+
+    </label>
+    
+    <label class="block-label" for="checkbox-2">
+      <input id="checkbox-2" type="checkbox" onclick="" name="exinfo1" value="{{ROUTECHOICE2}}">
+      GP 
+    </label>
+    <label class="block-label" for="checkbox-3">
+      <input id="checkbox-3" type="checkbox" onclick="" name="exinfo1" value="{{ROUTECHOICE2}}">
+     Nurse Specialist at hospital clinic
+    </label>
+    <label class="block-label" for="checkbox-4">
+      <input id="checkbox-4" type="checkbox" onclick="" name="exinfo1" value="{{ROUTECHOICE2}}">
+     GP Nurse
+    </label>
+  </fieldset>
+</div>
+</div>
+
+
+ 
+    
+ 
+    
+     <div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="continue" class="button" name="exinfo2" value="fish">
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+   
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

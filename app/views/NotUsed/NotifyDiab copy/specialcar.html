@@ -1,0 +1,96 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+  
+
+    <h1 class="form-title heading-medium">
+      As a result of your medical condition do you <em class="highlight">need</em> to drive a vehicle where the following has been fitted? {{ROUTECHOICE}}
+    </h1>
+         
+     
+ <form action="D497check" method="get" class="form inline">     
+ 
+  <div class="grid-row">
+    <div class="column-full">
+
+      <label class="form-label">Automatic transmission</label>
+
+<div class="form-group">
+  <label class="block-label" for="radio-3">
+    <input id="radio-3" type="radio" name="autogroup" value="{{ROUTECHOICE}}" >
+    Yes
+  </label>
+  <label class="block-label" for="radio-4">
+    <input id="radio-4" type="radio" name="autogroup" value="{{ROUTECHOICE}}" >
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+
+  
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Special adaptations  </label>
+  <label class="block-label" for="radio-5">
+    <input id="radio-5" type="radio" name="specialgroup1" value="yes{{ROUTECHOICE}}" >
+    Yes
+  </label>
+  <label class="block-label" for="radio-6">
+    <input id="radio-6" type="radio" name="specialgroup1" value="no{{ROUTECHOICE}}" >
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+
+  
+  </div>
+   
+      <button type="submit" id="continue" class="button next validation-submit">
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+        
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

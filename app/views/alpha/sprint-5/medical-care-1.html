@@ -1,0 +1,96 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+  {{>includes/elements_scripts}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+</header>
+
+<main id="page-container" role="main">
+
+  <form action="medical-form" class="form">
+
+    <h1 class="form-title heading-medium">
+      Who did you last see for your {{flow}} care? 
+    </h1>
+
+    <span class="form-hint"></span>
+
+    <div class="grid-row" id="q7">
+      <div class="column-half ">
+ 
+        <fieldset>
+
+          <label class="block-label" for="q7-a1" id="q7-a1-label">
+            <input id="q7-a1" type="radio" name="q7-answer" value="CN" onclick="answer(this)">Consultant
+          </label>
+          <label class="block-label" for="q7-a2" id="q7-a2-label">
+            <input id="q7-a2" type="radio" name="q7-answer" value="GP" onclick="answer(this)">GP 
+          </label>
+          <label class="block-label" for="q7-a3" id="q7-a3-label">
+            <input id="q7-a3" type="radio" name="q7-answer" value="NS" onclick="answer(this)">Nurse Specialist at hospital clinic
+          </label>
+          <label class="block-label" for="q7-a4" id="q7-a4-label">
+            <input id="q7-a4" type="radio" name="q7-answer" value="GN" onclick="answer(this)">GP Nurse
+          </label>
+
+        </fieldset>
+
+        <div class="grid-row"> <br> </div>
+        <div class="grid-row"> <br> </div>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input id="continue" type="button" class="button" value="Continue" onclick="decision(this,'{{flow}}','{{conditions}}')"/> 
+    </div>
+
+    <ul>
+      <li><a href="javascript:history.go(-1);">Back</a></li>
+    </ul>
+    
+  </form>  
+
+<script>
+
+  var data = {
+    state: "",
+    validate: "true",
+    questions: [
+      {id: "q7", type: "radio", active: "true", answers: [
+          {id: "q7-a1", value: "", show: [], hide: [], decision: "1"},
+          {id: "q7-a2", value: "", show: [], hide: [], decision: "1"},
+          {id: "q7-a3", value: "", show: [], hide: [], decision: "1"},
+          {id: "q7-a4", value: "", show: [], hide: [], decision: "1"}
+        ]
+      }
+    ],
+    decisions: [
+      {id: "1", description: "Q7: All", message: "", redirect: "medical-care-2?flow={{flow}}&conditions={{conditions}}&path={{path}}"}
+    ]
+  };
+
+  initialise(data);
+
+</script>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

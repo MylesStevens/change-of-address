@@ -1,0 +1,92 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+</header>
+
+<main id="page-container" role="main">
+
+  <form id="medical-form" class="form">
+
+    <h1 class="form-title heading-medium">
+      Your consultant's contact details 
+    </h1>
+   
+    <div class="form-group" id="q8">
+      <label class="form-label" for="postcode" id="q8-a1-label">
+        Consultant's Phone Number
+        <span class="form-hint">
+          For example, '01792 123456'
+        </span>
+        <!--input id="q8-a1" name="q8-a1" type="text" maxlength="11" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onclick="answer(this)"-->
+        <input id="q8-a1" name="q8-a1" type="text" maxlength="11" class="form-control" onkeyup="answer(this)">
+        <br/>
+      </label>
+    </div>
+
+    <div class="form-group" id="q9">
+      <label class="form-label" for="Consultantname">
+        Consultant's Email Address
+        <span class="form-hint">
+          For example, 'doc@hospital.com'
+        </span>
+        <input id="q9-a1" name="q9-a1" type="text" class="form-control" onkeyup="answer(this)">
+        <br/>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <input id="continue" type="button" class="button" value="Continue" onclick="decision(this)"/> 
+    </div>
+
+    <ul>
+      <li><a href="javascript:history.go(-1);">Back</a></li>
+    </ul>
+
+  </form>
+
+<script>
+
+  var data = {
+    state: "",
+    validate: "false",
+    questions: [
+      {id: "q8", type: "text", active: "true", answers: [
+          {id: "q8-a1", value: "", show: [], hide: [], decision: "1"}
+        ]
+      },
+      {id: "q9", type: "text", active: "true", answers: [
+          {id: "q9-a1", value: "", show: [], hide: [], decision: "1"}
+        ]
+      }
+    ],
+    decisions: [
+      {id: "1", description: "All finished", message: "", redirect: "medical-care-3?path={{path}}"}
+    ]
+  };
+
+  initialise(data);
+
+</script>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

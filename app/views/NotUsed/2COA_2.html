@@ -1,0 +1,92 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+  <p>{{postcode}}</p>
+
+<!--   <a href="/" class="example-back-link">Back</a>
+<h1 class="form-title heading-medium">
+      Current details
+    </h1>
+ 
+        
+<div>
+          <h3>Address</h3>
+          <div class="data-wrap">
+            <p>142 Mapledene Road<br>London<br>E8 3LL</p>
+          </div>
+        </div>
+        <div>
+    
+</div>  -->
+
+
+  
+
+    <h1 class="form-title heading-medium">
+      There are two matching addresses
+    </h1>
+         
+      </label>
+ <form action="2COA_3a" method="NULL" class="form">     
+  <div class="form-group">
+    <fieldset>
+ 
+    <label for="address_uprn">
+      <span class="visuallyhidden">Select your </span>
+    Select the address closest to your own
+    </label>
+</fieldset>
+<label class="block-label" for="radio-1">
+    <input id="radio-1" type="radio" name="radio-group" value="222 Middle Road, Cwmdu, SWANSEA, SA5 8EY">
+    2 Beacontree Avenue, Waltamstow, LONDON, E17 4BT
+  </label>
+  <label class="block-label" for="radio-2">
+    <input id="radio-2" type="radio" name="radio-group" value="Flat, 222 Middle Road, Cwmdu, SWANSEA, SA5 8EY">
+    Flat 1, 2 Beacontree Avenue, Waltamstow, LONDON, E17 4BT
+  </label>
+  
+  </div>
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+     <input name="Findaddress4" type="Submit" class="button" value="Continue"> 
+    
+    </form>  
+    
+      <ul>
+        <li><a href="2COA_manual" class="toggle">
+      I can’t find my address in the list<span class="visuallyhidden"> section</span>
+    </a>
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

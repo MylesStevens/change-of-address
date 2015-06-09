@@ -1,0 +1,145 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+</header>
+
+<main id="page-container" role="main">
+
+    <h1 class="form-title heading-medium">
+      Your personal details       
+
+    </h1>
+
+ <form id="form1" action="medical-conditions.html" method="get" class="form">
+   
+    
+
+     <p></p>
+        <h4 class="heading-small">Enter details below as shown on your driving licence</h4>
+        <p></p>
+<div class="form-group">
+       <label class="form-label" >
+        <label for="forename">First name(s)
+            <span class="form-hint">For example, Sarah Meredyth</span>
+           <input type="text" class="form-control" id="first" >
+          <br>
+      </label>
+    
+<p></p>
+     <label class="form-label" >
+        <label for="forename">Surname
+            <span class="form-hint">For example, Smith</span>
+           <input type="text" class="form-control" id="surname" >
+          <br>
+      </label>
+    
+<p></p>
+    <label class="form-label" >
+        <label for="forename">Postcode
+            <span class="form-hint">For example, EH1 9SP</span>
+           <input type="text" class="form-control" id="postcode">
+          <br>
+      </label>
+    </div>
+</div>
+<p></p>
+
+<div class="grid-row">
+  <div class="column-full inline">
+
+      <label class="form-label">Gender</lable>
+
+    <div class="form-group">
+      <label class="block-label" for="radio-F">
+      <input id="radio-F" type="radio" name="gender" value="F" >
+     Female
+    </label>
+    <label class="block-label" for="radio-M">
+    <input id="radio-M" type="radio" name="gender" value="M" >
+      Male
+      </label>
+
+    </div>
+  </div>
+</div>
+
+<div class="grid-row">
+<div id="dob-control-group" class="column-third inline ">
+   
+    <fieldset>
+        <legend><span id="dobLabel">Date of birth</span>
+            <span class="form-hint">Example: 31 3 1970</span>
+        </legend>
+      <div class="grid-row">  
+        <div class="column-quarter">
+          <label class="form-label" >
+          <label for="forename">Day
+            <span class="form-hint"></span>
+           <input type="text" class="form-control-3-4" id="Day" >
+         </label>
+        </div>
+
+        <div class="column-quarter">
+          <label class="form-label" >
+          <label for="forename">Month
+            <span class="form-hint"></span>
+           <input type="text" class="form-control-3-4" id="Month">
+         </label>
+        </div>
+
+        <div class="column-half">
+          <label class="form-label" >
+          <label for="forename">Year
+            <span class="form-hint"></span>
+           <input type="text" class="form-control-3-4" id="Year">
+         
+          </label>
+        </div>
+        </div>
+    </fieldset>
+    
+</div>
+</div>
+     
+
+<div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="" >
+        Confirm
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+    
+
+    
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

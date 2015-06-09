@@ -1,0 +1,51 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+</header>
+
+<script>
+
+var flow = '{{flow}}';
+var list = '{{conditions}}'.split(",");
+
+//alert('Flow: '+flow+', Conditions: '+list);
+
+var next = 'summary?flow={{flow}}&conditions={{conditions}}';
+
+/*
+var found = false;
+for(var i=0; i < (list.length - 1); i++) {
+  if((flow == list[i]) && (i <= (list.length - 2))) {
+    next = list[i+1]+'-start?flow='+list[i+1]+'&conditions={{conditions}}';
+  }
+}
+*/
+
+//alert('Next: '+next);
+
+window.location.href = next;
+
+</script>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

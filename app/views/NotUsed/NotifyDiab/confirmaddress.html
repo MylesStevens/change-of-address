@@ -1,0 +1,91 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+
+
+
+
+    <h1 class="form-title heading-medium">
+      Confirm your consultants details
+      {{ROUTECHOICE}}
+    </h1>
+
+ 
+<form action="consultancontact" method="get" class="form">
+      <label class="form-label" for="Adress">
+        Address
+        <span class="form-hint">
+          Amend address if needed and Confirm
+          
+        </span>
+      </label>
+      <div class="validation-wrapper">
+        <p><input type="text" class="form-control" id="Address1" value="Dr Gregory House"></p>
+      <p><input type="text" class="form-control" id="Address1" value="Diabetes Clinic"></p>
+      <p><input type="text" class="form-control" id="Address2" value="Morriston Hospital"></p>
+      <p><input type="text" class="form-control" id="Address3" value="Heol Maes Eglwys" ></p>
+      <p><input type="text" class="form-control" id="City" value="SWANSEA"></p>
+      <p><input type="text" class="form-control" id="PCODE" value="SA6 6NL"></p>
+    </div>
+
+    
+    </fieldset>
+</div>
+    <!-- <div class="validation-message visible"><a href="https://www.registertovote.service.gov.uk/register-to-vote/address/manual#address_manualAddress_lineOne">Please answer this question</a></div> --><!-- <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="addressManual">
+        Continue_validate
+    </button>  -->
+
+
+
+
+
+
+    <!-- Primary buttons, secondary links -->
+    <div class="grid-row">
+   <div class="column-full">
+   <br>
+     <button type="submit" id="sub" class="button" name = "sub" value="{{ROUTECHOICE}}" >
+        Confirm Address
+    </button>
+    
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+    </div>
+    
+
+    
+
+
+</form>
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

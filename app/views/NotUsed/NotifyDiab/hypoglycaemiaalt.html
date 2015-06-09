@@ -1,0 +1,177 @@
+
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+// var postcodeV = document.forms["form1"]["postcode"].value;
+
+// if (postcodeV ==""){
+// document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+// }
+// else{
+
+
+    window.location.href ="Epilepsy1.html";
+  // }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+<script>
+  function shownext() { 
+    question3.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function hidenext() { 
+    question3.style.display = "none";
+
+  }
+</script>
+
+<script>
+  function shownext2() { 
+    question4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function hidenext2() { 
+    // question4.style.display = "none";
+
+  }
+</script>
+
+<script>
+  function shownext3() { 
+    form4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function showhypo() { 
+    hypoinfo.style.display = "block";
+    hypoinfo2.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function nextscreen() { 
+
+
+    window.location.href ="summary.html";
+  // }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+</header>
+
+
+
+<main id="page-container" role="main">
+
+<!-- <h2 class="form-title heading-medium">
+      Your <em class="highlight">diabetes</em>
+    </h2>  -->
+
+<form action="hypocheck2a" method="get" class="form inline">
+ <div class="grid-row">
+    <div class="column-full">
+
+      <h4 class="heading-medium">Hypolycaemia{{ROUTECHOICE}}</h4>
+
+    
+
+      <h3 class="heading-small">Hypoglycaemia causes symptoms such as</h3>
+      
+  <ul class="list-bullet">
+    <li>hunger</li>
+    <li>shakiness</li>
+    <li>nervousness</li>
+    <li>sweating</li>
+    <li>dizziness or light-headedness</li>
+    <li>sleepiness</li>
+    <li>confusion</li>
+    <li>difficulty speaking</li>
+    <li>anxiety</li>
+    <li>weakness</li>
+  </ul>
+  
+  <p>Hypoglycaemia can also happen during sleep. Some signs of hypoglycaemia during sleep include</p>
+  <ul class="list-bullet">
+    <li>crying out or having nightmares</li>
+    <li>finding pyjamas or sheets damp from perspiration</li>
+    <li>feeling tired, irritable, or confused after waking up</li>
+  </ul>
+</div>
+<div class="grid-row">
+<div class="column-full">
+        <div class="dwp-permission-group">
+            <label><input type="checkbox" id="dwpPermission" name="dwpPermission" value="1">
+                <span class="heading-small">Please read the following information carefully and tick the box to show you understand.</span>
+
+<p></P>
+
+<p class="heading-small">Declaration</P>
+
+<p>I have insulin treated diabetes and I understand hypoclycaemia and the way it can affect me.
+</p>
+            </label>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+
+
+<div class="form-group">
+ 
+ 
+    
+   <input name="Findaddress4" type="Submit" class="button" value="Continue"> 
+
+</div>
+</form>
+
+<form action="{{next}}">
+
+ <a class="back-to-previous" href="/drivers-details">
+    <i class="fa fa-angle-left"></i>
+    Back <span class="visuallyhidden"> to the previous question</span>
+</a> 
+
+</form>
+
+ </main>
+
+ {{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
+

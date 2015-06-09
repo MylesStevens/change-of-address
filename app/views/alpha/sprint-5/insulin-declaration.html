@@ -1,0 +1,58 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script>
+  function next() { 
+    window.location.href ="diabetic-care?flow={{flow}}&conditions={{conditions}}";
+  }
+</script>
+
+</header>
+
+<main id="page-container" role="main">
+
+<h1 class="form-title heading-medium">
+      Declaration: For insulin treated only
+    </h1> 
+ 
+<div class="grid-row">
+<div class="column-full">
+        <div class="dwp-permission-group">
+            <label><input type="checkbox" id="dwpPermission" name="dwpPermission" value="1">
+                <span class="heading-small">Please read the following information carefully and tick the consent box</span>
+                  <p>I have insulin treated diabetes and I understand the need to test my blood glucose/sugar at times relevant to driving (not more than 2 hours before the start of the first journey and every 2 hours while driving).</p>
+            </label>
+        </div>
+    </div>
+</div>
+<p><br></p>
+<div class="grid-row">
+<div class="column-half">
+<input name="Continue" type="button" class="button" value="Continue" onclick="next()">  
+</div>
+</div>
+
+
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

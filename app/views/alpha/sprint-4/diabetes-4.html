@@ -1,0 +1,88 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+  <form action="hypocheck" method="get" class="form inline">     
+
+    <div class="grid-row" id="q6">
+      <div class="column-full">
+
+        <h1 class="form-title heading-medium">
+          Have you been seen within the last 12 months for your diabetic care?  
+        </h1>
+     
+        <div class="form-group">
+
+          <label class="block-label" for="q6-a1" id="q6-a1-label">
+            <input id="q6-a1" type="radio" name="q6-answer" value="Y" onclick="answer(this)">Yes
+          </label>
+          <label class="block-label" for="q6-a2" id="q6-a1-label">
+            <input id="q6-a2" type="radio" name="q6-answer" value="N" onclick="answer(this)">No
+          </label>
+
+          <div class="grid-row"> <br> </div>
+          <div class="grid-row"> <br> </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <input id="continue" type="button" class="button" value="Continue" onclick="decision(this)" disabled="true"/> 
+    </div>
+
+    <ul>
+      <li><a href="javascript:history.go(-1);">Back</a></li>
+    </ul>
+
+  </form>  
+
+<script>
+
+  var data = {
+    state: "",
+    validate: "true",
+    questions: [
+      {id: "q6", type: "radio", active: "true", answers: [
+          {id: "q6-a1", value: "", show: [], hide: [], decision: "1"},
+          {id: "q6-a2", value: "", show: [], hide: [], decision: "2"}
+        ]
+      }
+    ],
+    decisions: [
+      {id: "1", description: "Q6: Yes", message: "", redirect: "eyesight-treatment?path=direct"},
+      {id: "2", description: "Q6: No", message: "", redirect: "medical-consent?path=doctor"}
+    ]
+  };
+
+  initialise(data);
+
+</script>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

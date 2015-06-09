@@ -1,0 +1,273 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Helpers
+@import "elements/helpers";
+
+// Reset
+@import "elements/reset";
+
+// Typography
+@import "elements/typography";
+
+// Layout
+@import "elements/layout";
+
+// Modules
+// ==========================================================================
+
+// Forms
+@import "elements/forms";
+
+// Tables
+@import "elements/tables";
+
+// Buttons
+@import "elements/buttons";
+
+// Details
+@import "elements/details";
+
+// Lists
+@import "elements/lists";
+
+// Panels
+@import "elements/panels";
+
+
+
+.form-control-dropdown {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  //-webkit-box-sizing: border-box;
+  //-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #bfc1c3;
+  //-webkit-appearance: none;
+  border-radius: 0; }
+  @media (max-width: 640px) {
+    .form-control-dropdown {
+      font-size: 16px;
+      line-height: 1.25; } }
+  @media (min-width: 641px) {
+    .form-control-dropdown {
+      width: 50%; } }
+
+
+.button-secondary {
+    @include button ($grey-3);
+    font-family: "nta", Arial, sans-serif;
+  color: black;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 400;
+  }
+
+
+
+.bold-small {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.9;
+  font-weight: 700;
+  
+  text-transform: none;
+   }
+
+   .light-small {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.9;
+  font-weight: 100;
+  
+  text-transform: none;
+   }
+
+   .right {
+    position: relative;
+    left: 827px;
+    width: 400px;
+    
+}
+
+.dwp-permission-group {
+background-color: #D5E8F3;
+padding: 19px;
+//border-radius: 4px;
+//border-width: 1px;
+//border-color: #CBCBCB;
+//border-style: solid;
+margin: 0.5em 0 0 0;
+}
+
+.success-group {
+background-color: #249285;
+padding: 19px;
+//border-radius: 4px;
+//border-width: 1px;
+//border-color: #CBCBCB;
+//border-style: solid;
+margin: 0.5em 0 0 0;
+}
+
+.form-control-noborders{
+  font-family: "nta", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 0.8;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  //-webkit-box-sizing: border-box;
+  //-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  background-color: #fff;
+  border: 2px solid blue;
+  
+  //-webkit-appearance: none;
+  border-radius: 0; }
+  @media (max-width: 640px) {
+    .form-control-dropdown {
+      font-size: 13px;
+      line-height: 0.8; } }
+  @media (min-width: 641px) {
+    .form-control-dropdown {
+      width: 50%; } }
+
+.column-full {
+  padding: 0 15px;
+  box-sizing: border-box; }
+  @media (min-width: 641px) {
+    .column-full {
+      float: left;
+      width: 100%; } }
+
+
+      .column-eighth {
+        padding: 0 15px;
+        box-sizing: border-box; }
+      @media (min-width: 641px) {
+    .column-eighth {
+      float: left;
+      width: 8%; } }
+
+     
+
+
+.border-bottom {
+
+padding-bottom: 19px;
+
+border-width: 1px;
+border-color: #c0c0c0;
+border-bottom-style: solid;
+margin: 0.5em 0 0 0;
+}
+
+.starthidden {
+    display: none;
+ 
+  }
+
+
+.form-control-9-10 {
+  width: 100%; }
+  @media (min-width: 641px) {
+    .form-control-9-10 {
+      width: 100%; } }
+
+.heading-validation-message {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 700;
+  color: #df3034;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    .bold-small {
+      font-size: 16px;
+      line-height: 1.25; } }  
+
+.validation-summary-field-div{
+  border-left: 5px solid #df3034;
+  padding: 15px 30px;
+  margin-bottom: 30px; }
+
+.validation-summary-field{
+  border-left: 3px solid #df3034;
+  padding: 15px 30px;
+  margin-bottom: 30px; }
+
+.validation-summary-input{
+  border: 5px solid #df3034;
+  
+  }
+
+.highlightfix{
+  
+  color: #2E8ACA
+}
+
+
+    .declarationheading{
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+
+
+  }
+
+      .finishheading{
+  font-family: "nta", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  vertical-align: middle;
+
+  }
+
+      .finishtick{
+  vertical-align: middle; 
+  margin-top: -10px; 
+  margin-right: 10px;
+  }
+
+  .searchBox{
+  background-image: url("../images/icons/tick.png");
+  background-repeat: no-repeat;
+  background-position: 105% 50%;
+  padding: em(7) em(41) em(4) em(16);
+}
+
+  .double {
+  zoom:2;
+  transform:scale(2);
+  -ms-transform:scale(2);
+  -webkit-transform:scale(2);
+  -o-transform:scale(2);
+  -moz-transform:scale(2);
+  transform-origin:0 0;
+  -ms-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+  -o-transform-origin:0 0;
+  -moz-transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+}
+
+
+     

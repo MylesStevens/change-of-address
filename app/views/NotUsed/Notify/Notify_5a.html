@@ -1,0 +1,83 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+
+<header>
+
+  <script>
+  function nextscreen() { 
+
+    window.location.href ="Notify_7.html";
+
+  }
+  
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+  
+
+  
+
+  
+
+    <h1 class="form-title heading-medium">
+      When was the last time you visited your GP?
+    </h1>
+         
+      
+ <form id="form1" action="2COA_2" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-label" for="postcode">
+        Date<span class="form-hint">
+          For example, '02/04/1999'. If you don't have the exact day, use the first of the month
+           </span>
+           <input type="Date" class="form-control-1-4" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    
+
+<p class ="validation-message" id="postcodeerror"> </p>
+  
+         
+
+            <div class="form-group">
+      <button type="button" id="continue" class="button" value="Continue" onclick="nextscreen()"> 
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+      
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

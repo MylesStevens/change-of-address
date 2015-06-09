@@ -1,0 +1,149 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+var postcodeV = document.forms["form1"]["postcode"].value;
+
+if (postcodeV ==""){
+document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+}
+else{
+
+
+    window.location.href ="Notify_5.html";
+  }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+
+
+
+  
+
+    <h1 class="form-title heading-medium">
+      What is the name and address of your consultant? 
+      {{ROUTECHOICE}}
+
+    </h1>
+
+        <span class="form-hint">You can search on the hospital/clinic name, the post code or both</span>
+
+
+ <form id="form1" action="confirmadd1" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-label" for="postcode">
+        
+        Consultant's name
+        <span class="form-hint">
+          For example, 'Dr Donald Blake'
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+<div class="form-group">
+       <label class="form-label" for="Consultantname">
+        Hospital/clinic name
+        <span class="form-hint">
+          For example, 'Fforestfach Medical Centre'
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="postcode">
+        Postcode
+        <span class="form-hint">
+    
+          For example, 'SA5 8ET'
+          </span>
+           <input type="text" class="form-control" id="postcode" name="postcode">
+        </label>
+      
+    </div>
+
+     
+
+<div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="{{ROUTECHOICE}}" >
+        Find Address
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+    
+
+    <!-- <details>
+    <summary><span class="summary">I don’t know what postcode to use</span></summary>
+    <div class="panel-indent">
+     <p>
+          If you can’t find your postcode on a letter or other document, try entering your address into a search engine website.
+        </p>
+        <h4>If you have more than one address</h4>
+        <p>
+          It’s sometimes possible to register at two addresses (though you can only vote once in any election).
+        </p>
+        <p>
+          For example, if you’re a student living away from home, you may be able to register at both your home and term time addresses.
+        </p>
+        <p>
+          If you want to register at two addresses, make two separate applications through this service. Your local Electoral Registration Office will look at each application and tell you whether you’re allowed to register.
+        </p>
+        <h4>If you don’t have a permanent address</h4>
+        <p>
+          If you’re homeless and living in temporary accommodation (for example, a long term hostel), use that address.
+        </p>
+        <p>
+          If you’re a long term patient in a psychiatric hospital, use the address of the hospital.
+        </p>
+        
+    </div>
+  </details> -->
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

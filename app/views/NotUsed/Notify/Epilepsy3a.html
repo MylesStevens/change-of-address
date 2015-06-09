@@ -1,0 +1,210 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+
+
+
+<script>
+
+  function visible3g() { 
+
+    question3g.style.display = "block";
+
+    question3h.style.display = "none";
+   
+  }
+
+    function visible3h() { 
+
+    question3h.style.display = "block";
+
+    question3g.style.display = "none";
+   
+  }
+
+ function visible3h2() { 
+
+    question3h.style.display = "block";
+
+    
+   
+  }
+    function visible3hi() { 
+
+    question3hi.style.display = "block";
+
+    
+   
+  }
+
+</script>
+
+
+</header>
+
+<main id="page-container" role="main">
+
+  
+<p><br></P>
+    
+         
+     
+ <form action="summary" method="NULL" class="form">     
+ 
+  <div class="grid-row">
+    <div class="column-full">
+
+      <p class="heading-small">Have your seizures ever affected your level of consciousness?</p>
+
+<div class="form-group">
+  <label class="block-label" for="radio-3">
+    <input id="radio-3" type="radio" name="radio-group2" value="Yes2" onclick="visible3h()">
+    Yes 
+  </label>
+  <label class="block-label" for="radio-4">
+    <input id="radio-4" type="radio" name="radio-group2" value="No2" onclick="visible3g()">
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="grid-row starthidden" ID ="question3g">
+  <div class="column-full">
+  <div class="form-group" >
+    <p class="heading-small">Would your seizures ever have caused difficulty controlling a vehicle? </p>
+  <label class="block-label" for="radio-5">
+    <input id="radio-5" type="radio" name="radio-group3" value="Yes2" onclick="visible3h2()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-6">
+    <input id="radio-6" type="radio" name="radio-group3" value="No2" onclick="visible3h2()">
+    No
+  </label>
+</div>
+</div>
+</div>
+
+<div class="grid-row starthidden" ID ="question3h">
+  <div class="column-full">
+  <div class="form-group" >
+    <p class="heading-small">Was your last seizure a result of advice from your doctor to either stop, reduce or change your medication? </p>
+  <label class="block-label" for="radio-7">
+    <input id="radio-7" type="radio" name="radio-group4" value="Yes2" onclick="visible3hi()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-8">
+    <input id="radio-8" type="radio" name="radio-group4" value="No2" >
+    No
+  </label>
+</div>
+</div>
+</div>
+
+<div class="grid-row starthidden" ID ="question3hi">
+<div class="column-full">
+  <div class="form-group" >
+  <label class="heading-small" >
+        Please give the date you started to reduce/change your medication.
+ </label><span class="form-hint">
+          e.g. '14/06/2015'
+           </span>
+           <input type="Date" class="form-control-1-4" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    </div>
+  
+
+  <div class="column-full">
+  <div class="form-group" >
+    <p class="heading-small">Has previously effective medication been restarted? </p>
+  <label class="block-label" for="radio-7">
+    <input id="radio-8" type="radio" name="radio-group4" value="Yes2" >
+    Yes
+  </label>
+  <label class="block-label" for="radio-7">
+    <input id="radio-8" type="radio" name="radio-group4" value="No2" >
+    No
+  </label>
+</div>
+</div>
+
+
+<div class="column-full">
+  <div class="form-group" >
+  <label class="heading-small" >
+        Please give the date the previous effective medication was restarted.
+ </label><span class="form-hint">
+          e.g. '14/06/2015'
+           </span>
+           <input type="Date" class="form-control-1-4" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    </div>
+
+
+ 
+<div class="column-full">
+  <div class="form-group" >
+  <label class="heading-small" >
+        Please give the date of your last seizure prior to the medication withdrawal / reduction seizure.
+ </label><span class="form-hint">
+          e.g. '14/06/2015'
+           </span>
+           <input type="Date" class="form-control-1-4" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    </div>
+  </div>
+
+
+   
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="radio-3 radio-4"  >
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+        
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

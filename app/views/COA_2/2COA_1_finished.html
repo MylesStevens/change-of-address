@@ -1,0 +1,123 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation2}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+var postcodeV = document.forms["form1"]["postcode"].value;
+
+if (postcodeV ==""){
+document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+}
+else{
+
+
+    window.location.href ="2COA_2.html";
+  }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+
+<div id="wrapper" class="transaction service">
+    <main id="content" role="main" class="group">
+        
+            
+
+</div>
+    
+
+
+
+<div class="right"><p><a href="../index" >Log out </a></P></div>
+
+
+
+
+<div class="grid-row">
+<p><img src="../public/images/faketabs.png" name="faketabs"/></p></div>
+
+<!-- <div id="your-details" class="" style="display: block;">
+    <div>
+        <p>To update your details or renew your licence visit the <a href="https://www.gov.uk/browse/driving/driving-licences" target="_blank">driving licence</a> section on GOV.UK</p>
+    </div> -->
+
+    <h2 class="visuallyhidden">Personal Details</h2>
+    <dl>
+        <dt class="visually hidden">Name</dt>
+       <div><h2 class="heading-large">Ms SARAH MEREDITH MORGAN</h2></div>
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Date of birth</dt>
+          <dt class="light-small">Gender</dt>
+          <dt class="light-small">Address</dt></div>
+
+        <div class="column-half"> 
+          
+          <dd class="bold-small">10 Mar 1973</dd>
+          <dd class="bold-small">Female</dd>
+          <dd class="bold-small">14 Grace Street Broadacre WOLVERHAMPTON  <br> <span class="postcode">WV1 9EA</span>
+        </dd></div>
+        <div class="column-quarter"> 
+          <dt class="light-small"> &nbsp;</dt>
+          <dt class="light-small">&nbsp; </dt>
+          <dt ><a href="/COA_2/2COA_A" class="button disabled" >Change address </a></dt></div>
+    </dl>
+  </div>
+    </div>
+
+<dl>
+    
+    <div><h2 class="heading-large">Licence details</h2> </div>
+
+    
+   
+
+<div class="grid-row">
+   <div class="column-quarter"> <dl>
+        <dt class="light-small">Driving status</dt> 
+        <dt class="light-small">Licence valid from</dt>
+        <dt class="light-small">Licence valid to</dt>
+        <dt class="light-small">Driving licence number</dt>
+        <dt class="light-small">Licence issue number</dt>
+      </div>
+<div class="column-half">
+          <dd class="bold-small">You have a provisional driving licence</dd>
+        <dd class="bold-small">24 Sep 2013</dd>
+        <dd class="bold-small">23 Sep 2023</dd>
+        <dd class="bold-small">MORGA753116SM9IJ</dd>
+        <dd class="bold-small">05</dd>
+         </div></div>
+        
+    </dl>
+</div>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

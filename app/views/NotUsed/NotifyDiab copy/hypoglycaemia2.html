@@ -1,0 +1,199 @@
+
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+// var postcodeV = document.forms["form1"]["postcode"].value;
+
+// if (postcodeV ==""){
+// document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+// }
+// else{
+
+
+    window.location.href ="Epilepsy1.html";
+  // }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+<script>
+  function shownext() { 
+    question3.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function hidenext() { 
+    question3.style.display = "none";
+
+  }
+</script>
+
+<script>
+  function shownext2() { 
+    question4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function hidenext2() { 
+    // question4.style.display = "none";
+
+  }
+</script>
+
+<script>
+  function shownext3() { 
+    form4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function showhypo() { 
+    hypoinfo.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function nextscreen() { 
+
+
+    window.location.href ="summary.html";
+  // }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+</header>
+
+
+
+<main id="page-container" role="main">
+
+
+    
+
+    
+<form class="inline">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h4 class="heading-medium">Have you ever had an episode of hypoglycaemia? {{ROUTECHOICE}}</h4>
+
+<div class="form-group">
+  <label class="block-label" for="radio-3">
+    <input id="radio-3" type="radio" name="hypo3a" value="{{ROUTECHOICE}}" onclick="shownext()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-4">
+    <input id="radio-4" type="radio" name="hypo3a" value="{{ROUTECHOICE}}" onclick="hidenext()">
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+</form>
+
+ <form action="Lasereyes" method="get" class="form inline">  
+<div class="starthidden" id="question3">
+  <div class="grid-row">
+
+    <div class="column-full">
+
+      <h4 class="heading-medium">Do you <span class="highlightfix">always</span> have warning symptoms of hypoglycaemia?</h4>
+
+     
+
+
+<div class="form-group">
+  <label class="block-label" for="radio-5">
+
+    <input id="radio-5" type="radio" name="hypo1a" value="{{ROUTECHOICE}}" onclick="shownext2()">
+    Yes
+  </label>
+
+  <label class="block-label" for="radio-6">
+    <input id="radio-6" type="radio" name="hypo1a" value="sad" onclick="hidenext2()">
+    No
+  </label>
+
+</div>
+</div>
+</div>
+
+
+<div class="grid-row">
+<div class="column-full">
+       
+       <h4 class="heading-medium">Have you had more than one episode of <span class="highlightfix">severe</span> hypoglycaemia in the last 12 months? </h4> 
+        <span class="form-hint">Severe Hypoglycaemia requires help from another person. Episodes where you were given help but could have helped yourself do not count.</span>
+      
+
+<div class="form-group">
+  <label class="block-label" for="radio-7">
+
+    <input id="radio-7" type="radio" name="hypo2a" value="sad" onclick="shownext2()">
+    Yes
+  </label>
+
+  <label class="block-label" for="radio-8">
+    <input id="radio-8" type="radio" name="hypo2a" value="{{ROUTECHOICE}}" onclick="hidenext2()">
+    No
+  </label>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+ 
+ 
+    
+   <input name="Findaddress4" type="Submit" class="button" value="Continue"> 
+
+</div>
+</form>
+
+<form action="{{next}}">
+
+ <a class="back-to-previous" href="/drivers-details">
+    <i class="fa fa-angle-left"></i>
+    Back <span class="visuallyhidden"> to the previous question</span>
+</a> 
+
+</form>
+
+ </main>
+
+ {{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
+

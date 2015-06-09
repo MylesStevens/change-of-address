@@ -1,0 +1,78 @@
+
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header class="page-header">
+
+</header>
+
+<main id="page-container" role="main">
+
+  <form action="medical-form" method="get" class="form inline">
+
+    <div class="grid-row" id="q1">
+      <div class="column-full">
+
+        <h4 class="heading-medium">Please read the inportant information below:</h4>
+
+        <p>You have confirmed that you have cataracts/macular degeneration/other macular disease or corneal dystrophy and can meet the minimum eyesight standards for driving.</p>
+
+      </div>
+    </div>
+  
+    <div class="panel-indent" id="info">
+
+      <ul class="list-bullet">
+        <li>Visual acuity is the sharpness of your vision. By law, you must be able to read a standard number plate from a distance of 20 metres with glasses or corrective lenses if worn. In addition, the visual acuity must be at least Snellen 6/12 (decimal 0.5) with both eyes open, or in the only functioning eye if monocular. If you do not meet this standard you must not drive on a public road as you would be committing an offence.</li>
+        <br/>
+        <li>You should regularly check for yourself that you can read a number plate from the required distance and discuss your visual acuity with your optician/eyesight specialist at each appointment to ensure you meet this standard. If your GP or optician/eye specialist says you do not meet this standard (with correction if required), you must either surrender your licence or notify us of the change by completing a further eyesight notification questionnaire.</li>
+      </ul>
+  
+    </div>
+
+    <div id="contact">
+      <div><span style="font-weight: bold;">Telephone:</span> 0300 790 6806</div>
+      <br/>
+      <div><span style="font-weight: bold;">Write:</span> Drivers Medical Group, DVLA Swansea SA99 1TU</div>
+      <br/>
+    </div>
+
+    <div class="form-group">
+      <input id="continue" name="continue" type="button" class="button" value="Continue" onclick="next(this)"> 
+    </div>
+
+  </form>
+
+    <a class="back-to-previous" href="javascript:history.go(-1);">
+      <i class="fa fa-angle-left"></i>
+      Back <span class="visuallyhidden"> to the previous question</span>
+    </a> 
+
+<script>
+
+  function next(element) {
+    window.location.href = 'special-adaptations?flow={{flow}}&conditions={{conditions}}';
+  }
+
+</script>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

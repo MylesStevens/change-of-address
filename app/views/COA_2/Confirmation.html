@@ -1,0 +1,93 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+
+  
+
+<script>
+  function shownext() { 
+    form2.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function shownext2() { 
+    form3.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function shownext3() { 
+    form4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function nextscreen() { 
+
+    window.location.href ="2COA_1_finished.html";
+
+  }
+  
+  </script>
+</header>
+
+
+<main id="page-container" role="main">
+
+<!-- <h1 class="form-title heading-medium">
+      Driving licence issue number
+-->
+<div class="grid-row">
+<div class="column-full">
+<p></P>
+
+        <div class="dwp-permission-group">
+            
+
+<!-- <p></P>  -->
+
+<p class="declarationheading">Declaration</p>
+<p class="font-small">I understand that the information I have entered is correct </p>
+
+   <input type="checkbox" id="dwpPermission" name="dwpPermission" value="1"  class ="double" style="margin-right: 20px; vertical-align: top;">
+                <span class="heading-small" style="vertical-align: bottom;">Check this box if you have read and understood the information presented here</span>
+
+
+            
+        </div>
+    </div>
+</div>
+<p><br></p>
+<div class="grid-row">
+<div class="column-half">
+<input name="Findaddress4" type="button" class="button" value="Continue" onclick="nextscreen()">  
+</div>
+</div>
+
+
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

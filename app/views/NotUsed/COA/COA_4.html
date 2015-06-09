@@ -1,0 +1,64 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+
+  <form action="COA_4" method="NULL" class="form">
+
+    <h1 class="form-title heading-medium">
+      Please confirm your new address
+    </h1>
+
+    <div class="form-group">
+        <span>244 Middle Road<br>
+        Cwmdu<br>
+        Swansea<br>
+        SA5 8ET</span>
+
+    </div>
+  </form>       
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="country" value="Confirm" > Confirm
+</button>
+        <br><button name="popaddress1" type="button" class="button-secondary" value="Cancel"  > Cancel
+        
+    </button>
+    
+   
+    
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+    
+
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

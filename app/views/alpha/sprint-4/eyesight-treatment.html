@@ -1,0 +1,90 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  {{>includes/elements_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<header>
+
+</header>
+
+<main id="page-container" role="main">
+
+  <form id="medical-form" class="form inline">     
+  
+    <div class="grid-row" id="q14">
+      <div class="column-full">
+
+        <h1 class="form-title heading-medium">
+          Have you had laser treatment or injections into both eyes (or remaining eye) for diabetic eye disease or other eye condition?
+        </h1>
+
+        <span class="form-hint">Do not include corrective surgery for short sightedness.</span>
+     
+        <div class="form-group">
+          <label class="block-label" for="q14-a1" id="q14-a1-label">
+            <input id="q14-a1" type="radio" name="q14-answer" value="Y" onclick="answer(this)">Yes
+          </label>
+          <label class="block-label" for="q14-a2" id="q14-a2-label">
+            <input id="q14-a2" type="radio" name="q14-answer" value="N" onclick="answer(this)">No
+          </label>
+
+          <div class="grid-row"> <br> </div>
+          <div class="grid-row"> <br> </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input id="continue" type="button" class="button" value="Continue" onclick="decision(this)"/> 
+    </div>
+
+    <ul>
+      <li><a href="javascript:history.go(-1);">Back</a></li>
+    </ul>
+    
+  </form>  
+    
+<script>
+
+  var data = {
+    state: "",
+    validate: "true",
+    questions: [
+      {id: "q14", type: "radio", active: "true", answers: [
+          {id: "q14-a1", value: "", show: [], hide: [], decision: "{{path}}-1"},
+          {id: "q14-a2", value: "", show: [], hide: [], decision: "{{path}}-2"}
+        ]
+      }
+    ],
+    decisions: [
+      {id: "direct-1", description: "Q14: (Direct Path) Yes", message: "", redirect: "eyesight-dystrophies?code=specg1"},
+      {id: "direct-2", description: "Q14: (Direct Path) No", message: "", redirect: "eyesight-dystrophies"},
+      {id: "doctor-1", description: "Q14: (Doctor Path) Yes", message: "", redirect: "eyesight-dystrophies?code=specg1,diab3"},
+      {id: "doctor-2", description: "Q14: (Doctor Path) No", message: "", redirect: "eyesight-dystrophies?code=diab3"}
+    ]
+  };
+
+  initialise(data);
+
+</script>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

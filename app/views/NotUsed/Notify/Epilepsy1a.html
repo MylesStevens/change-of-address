@@ -1,0 +1,154 @@
+
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+  <script>
+
+  function unclick() {
+
+if (document.getElementById('radio1').checked == true){
+   document.getElementById('radio2').checked = false;
+   document.getElementById('radio3').checked = false;}
+
+   insulindate1.style.display = "block";
+
+}
+
+  function unclick2() {
+
+
+   
+if (document.getElementById('radio2').checked == true){
+   document.getElementById('radio1').checked = false;
+   document.getElementById('radio3').checked = false;}
+   
+   insulindate1.style.display = "none";
+                                      
+
+}
+
+  function unclick3() {
+
+
+                                      
+if (document.getElementById('radio3').checked == true){
+   document.getElementById('radio2').checked = false;
+   document.getElementById('radio1').checked = false;}
+   insulindate1.style.display = "none";
+}
+
+
+  
+  </script>
+</header>
+
+
+
+<main id="page-container" role="main">
+
+      
+   
+
+
+<h2 class="form-title heading-medium">
+      Your <em class="highlight">epilepsy</em>
+    </h2> 
+
+ <div class="grid-row">
+    <div class="column-full">
+
+      <h4 class="heading-small">Please tell us how your diabetes is treated {{ROUTECHOICE}}</h4>
+
+    </div>  
+
+     <form method="get" action="EpilepsyDecsion1" class="form">
+
+<div class="form-group">
+  <div class="column-full"><label class="block-label" for="radio1">
+    <input id="radio1" type="radio" name="EpilepsyDecsion1a" value="{{ROUTECHOICE}}" onclick=
+"unclick()">
+    Insulin injection
+  </label></div>
+
+  <div class="column-full">
+    <br>
+  </div>
+<div class="column-full starthidden" id="insulindate1">
+  <div class="form-group">
+       <label class="form-label" for="postcode">
+        Approximate date insulin treatment started<span class="form-hint">
+          For example, '02/04/1999'
+           </span>
+           <input type="Date" class="form-control-1-4" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    </div>
+   
+  <div class="column-full"><label class="block-label" for="radio2">
+    <input id="radio2" type="radio" name="EpilepsyDecsion1b" value="{{ROUTECHOICE}}" onclick=
+"unclick2()" >
+    Other non-insulin injectable treatment 
+  </label></div>
+  <div class="column-full">
+    <br>
+  </div>
+
+  <div class="column-full"><label class="block-label" for="radio3">
+    <input id="radio3" type="radio" name="EpilepsyDecsion1c" value="{{ROUTECHOICE}}" onclick=
+"unclick3()">
+    Tablets
+  </label></div>
+
+<div class="column-full">
+    <br>
+  </div>
+
+
+<div class="column-full">
+<div class="form-group">
+ 
+ 
+    
+   <button type="submit" class="button" name="EpilepsyDecsion2a" > 
+   Continue </button>
+
+</form>
+<!-- </div> -->
+</div>
+
+
+<form action="{{next}}">
+
+ <a class="back-to-previous" href="/drivers-details">
+    <i class="fa fa-angle-left"></i>
+    Back <span class="visuallyhidden"> to the previous question</span>
+</a> 
+
+</form>
+</div>
+
+
+
+
+ </main>
+
+ {{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
+

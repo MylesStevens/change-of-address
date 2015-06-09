@@ -1,0 +1,147 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header>
+
+<script>
+
+  function notify() { 
+    window.location.href = 'Notify_3.html';
+  }
+
+  function reapply() {
+    window.location.href = 'https://www.gov.uk/reapply-driving-licence-medical-condition/when-you-can-start-driving-again';
+  }
+
+  function surrender() {
+    window.location.href = 'Surrender_1.html';
+  }
+
+</script>
+
+</header>
+
+<main id="page-container" role="main">
+
+<div class="grid-row">
+
+  <div class="column-full">
+
+    <h1 class="heading-medium">
+      Driving with a disability or a health condition
+    </h1>
+         
+    Please choose from the following options below.<br/><br/>
+
+    <form action="options" method="get" class="form inline">     
+ 
+       <details>
+        <summary><span class="summary">Notify the DVLA of a new medical condition</span></summary>
+
+        <div class="panel-indent">
+          <p>There’s no legal age at which you must stop driving. You can decide when to stop, but medical conditions can affect your driving and might mean you have to give up your driving licence until you can meet the medical standards of fitness to drive again.</p>
+
+          <p>When you decide to stop driving or are advised by your doctor to stop you’ll need to tell DVLA and send them your licence.</p>
+
+          <span style="font-weight: bold;">Do you wish to notify us of a new medical condition?</span><br/><br/> 
+
+          <button type="button" id="yes" class="button" onclick="notify();">
+          Yes please
+          </button>
+          <button type="submit" id="no" class="button" >
+          No thanks
+          </button>
+        
+        </div>
+
+      </details>
+
+       <details>
+        <summary><span class="summary">Reapply for a driving licence following a medical condition</span></summary>
+
+        <div class="panel-indent">
+          <p>There are different rules for when you can drive again depending on if your licence was voluntarily surrendered, or if it was revoked 
+          or refused for medical reasons. You must wait for DVLA to tell you that you can start driving again.</p>
+
+          <p>You can drive while your licence is being renewed if you meet all the following conditions:</p>
+
+          <div>
+          <li>you have the support of your doctor to continue driving</li>
+          <li>you had a valid licence</li>
+          <li>you only drive under the conditions of the previous licence</li>
+          <li>your application is less than a year old</li>
+          <li>your last licence wasn’t revoked or refused for medical reasons</li>
+          <li>you’re not currently disqualified</li>
+          <li>you weren’t disqualified as a high risk offender on or after 1 June 2013</li>
+          </div>
+
+          <br/>
+          <span style="font-weight: bold;">Do you wish to reapply for your driving licence online?</span><br/><br/> 
+
+          <button type="button" id="yes" class="button" onclick="reapply();">
+          Yes please
+          </button>
+          <button type="submit" id="no" class="button" >
+          No thanks
+          </button>
+        
+        </div>
+
+      </details>
+
+      <details>
+        <summary><span class="summary">Surrender your driving license to the DVLA</span></summary>
+
+        <div class="panel-indent">
+          <p>There’s no legal age at which you must stop driving. You can decide when to stop, but medical conditions can affect your driving and might mean you have to give up your driving licence until you can meet the medical standards of fitness to drive again.</p>
+
+          <p>When you decide to stop driving or are advised by your doctor to stop you’ll need to tell DVLA and send them your licence.</p>
+
+          <span style="font-weight: bold;">Do you wish to surrender your driving licence?</span><br/><br/> 
+
+          <button type="button" id="yes" class="button" onclick="surrender();">
+          Yes please
+          </button>
+          <button type="submit" id="no" class="button" >
+          No thanks
+          </button>
+        
+        </div>
+
+      </details>
+
+    </div>
+
+  </div>
+ 
+</div> 
+
+<div class="grid-row">
+   <div class="column-full">
+      <br>
+      <a href="/">Logout</a>
+      </ul>
+    </div>
+</div>
+
+</form>
+
+</main>
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

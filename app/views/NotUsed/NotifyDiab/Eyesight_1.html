@@ -1,0 +1,123 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header>
+
+
+<script>
+  function shownext() { 
+    question2.style.display = "block";
+
+  }
+</script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+  
+ <div class="grid-row">
+   <div class="column-full">
+
+    <h1 class="heading-medium">
+      Can you meet the legal eyesight standard for driving?
+
+    </h1>
+         
+     
+ <form action="YourCARE" method="get" class="form inline">     
+ 
+<div class="form-group ">
+  <label class="block-label" for="radio-3">
+    <input id="radio-3" type="radio" name="eye1" value="happy" onclick="shownext()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-4">
+    <input id="radio-4" type="radio" name="eye1" value="sad" >
+    No
+  </label>
+
+  </div>
+</div>
+</div>
+  <!-- <div class="grid-row"> <br> </div>
+  <div class="grid-row"> <br> </div> -->
+<details>
+    <summary><span class="summary">View the legal eyesight standard </span></summary>
+    <div class="panel-indent">
+     
+         <li>The legal eyesight standard means that you must be able to read a car number plate from 20 metres.</li><br><li>Also, you must not have been told by a doctor or optician that your eyesight is currently worse than 6/12 (decimal 0.5) on the Snellen scale.</li><br><li> If you are in any doubt, you should discuss with your optician or doctor.</li><br> <li>If required, you may wear glasses or corrective lenses to meet both of these standards.</li>
+        
+    </div>
+  </details>
+
+
+
+
+ <div class="grid-row starthidden" id="question2" >
+  <div class="column-full">
+   <h1 class="heading-medium">
+     Do you need to wear glasses or corrective lenses to meet this standard?
+
+    </h1>
+ 
+<div class="form-group inline">
+  <label class="block-label" for="radio-5">
+    <input id="radio-5" type="radio" name="eye2"  >
+    Yes
+  </label>
+  <label class="block-label" for="radio-6">
+    <input id="radio-6" type="radio" name="eye2"  >
+    No
+  </label>
+
+</div>
+</div>
+
+</div> 
+<div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="continue" class="button" >
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+    </div>
+</div>
+
+    
+
+    
+
+
+</form>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

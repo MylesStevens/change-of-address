@@ -1,0 +1,181 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+  <script>
+  function shownext() { 
+    noclickedVar ="no";
+    form1.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function FindAddress2() { 
+if (noclickedVar =="yes"){
+
+
+
+    window.location.href ="Notify_7.html";
+  } else{
+   
+    var locky = "Notify_6a.html";
+    window.location.href =locky;}
+
+}
+
+  </script>
+
+  <script>
+  var noclickedVar="no";
+
+  function noclicked() {
+  noclickedVar ="yes";
+
+}
+
+  </script>
+  <script>
+
+  function unclick1() {
+
+    document.getElementById('radio-1').checked = true;
+   document.getElementById('radio-2').checked = false;
+   form2.style.display = "block";
+
+}
+
+  function unclick2() {
+
+    document.getElementById('radio-1').checked = false;
+   document.getElementById('radio-2').checked = true;
+   
+
+}
+
+ </script>
+
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+<h2 class="form-title heading-medium">
+      Your <em class="highlight">diabetes</em>
+    </h2> 
+
+
+  
+
+    
+
+<form id="form1" action="Notify6" method="get" class="form">
+ <div class="grid-row">
+    <div class="column-full">
+
+      <h1 class="form-title heading-medium">
+      Tell us about any consultants/clinics you visit {{ROUTECHOICE}}
+
+    </h1>
+
+      <label class="form-label">Do you see a consultant or visit a clinic for your diabetes?
+
+      
+<div class="form-group">
+  <label class="block-label" for="radio-1">
+    <input id="radio-1" type="radio" name="Notify6a" value="{{ROUTECHOICE}}" onclick="unclick1()">
+    Yes
+  </label>
+  <label class="block-label" for="radio-2">
+    <input id="radio-2" type="radio" name="Notify6b" value="{{ROUTECHOICE}}" onclick="unclick2()">
+    No
+  </label>
+
+</div>
+</div>
+
+</div>
+  
+
+ <div class="column-full starthidden"  id="form2" >   
+    <div class="form-group" class="form">
+
+      <h1 class="form-title heading-small">
+      The consultant/clinic details
+    </h1>
+
+       <label class="form-label" for="postcode">
+        Name of consultant
+        <span class="form-hint">
+          For example, 'Dr. Otto Octavius' 
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    <div class="form-group">
+       <label class="form-label" for="postcode">
+        Name clinic/hospital
+        <span class="form-hint">
+          For example, 'Morriston Hospital'
+           </span>
+           <input type="text" class="form-control" id="housenum" name="housenum">
+          <br>
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="postcode">
+        Postcode
+        <span class="form-hint">
+          This is the postcode as it appears in the address
+          <br>
+          For example, 'SA5 8ET'
+          </span>
+           <input type="text" class="form-control" id="postcode" name="postcode">
+        </label>
+      
+    </div>
+
+    </div>
+     
+
+<p class ="validation-message" id="postcodeerror"> </p>
+  
+           <input name="Findaddress4" type="Submit" class="button" value="Continue"> 
+
+    
+  </form> 
+    
+      <ul>
+        <!-- <li><a href="#">Skip this section for now</a></li> -->
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+    
+
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
