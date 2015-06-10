@@ -5,7 +5,7 @@
 {{/head}}
 
 {{$propositionHeader}}
-  {{>includes/propositional_navigation_alpha}}
+  {{>includes/propositional_navigation3}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -13,7 +13,7 @@
 {{$content}}
 <header class="page-header">
 
- 
+
   
 
 <script>
@@ -27,7 +27,18 @@
 
 <script>
   function shownext2() { 
+    var postcodeV = document.getElementById('postcode').value;
+
+    var addressall = document.getElementById('addressdropdown').value;
+
+
+  var addressalllist = addressall.split(",");
     form3.style.display = "block";
+     document.getElementById("line1").innerHTML = addressalllist[0];
+     document.getElementById("line2").innerHTML = addressalllist[1];
+     document.getElementById("line3").innerHTML = addressalllist[2];
+     document.getElementById("line4").innerHTML = postcodeV;
+     // document.getElementById("line1").innerHTML = addressalllist[0];
     form2.style.display = "none";
     document.getElementById("confbutton").disabled = false; 
 
@@ -69,6 +80,7 @@
 </script>
 
 <script>
+    
   function supenter() { 
     var s1 = document.getElementById("supinfofield").value;
     supinfo.style.display = "none";
@@ -90,26 +102,14 @@
 
 <main id="page-container" role="main">
 
+<h1 class="form-title heading-medium">
+      Your new address
+    </h1> 
 
 
-     
-
-<div class="grid-row column-full">
-
-        
-     <h3 class="heading-medium">Ms SARAH MEREDITH MORGAN
-          <br>
-          <span class="bold-small">122 Burns Crescent EDINBURGH  <span class="postcode">EH1 9GP</span>
-        </span></h3>
-        <hr>
-</div>
-      
-
-  <div class=" grid-row column-two-thirds">
-  <p class="heading-medium">
-      Tell us our new address
-    </p> 
-</div>
+ <!-- <form id="form1"  class="form"> -->
+   
+    <!-- <div class="form-group border-bottom"> -->
   <div class="form-group">
        <label class="form-label" >
         Postcode</label>
@@ -174,33 +174,31 @@
 
 <div  class="grid-row starthidden" id="form3">
   <div class="column-full">
-
 <div class="form-label" for="select">
         Your new address</div>
+
     <div class="validation-wrapper starthidden" id="supinfo">
-      <!-- <form id="suppform"> -->
       Supplementary information
       <span class="form-hint">For example, flat number or house name.</span>
       <input type="text" class="form-control" id="supinfofield"  onKeyUp="if (event.keyCode == 13) supenter()"> <input name="Addaddress" type="button" class="button-secondary" value="Add line" onclick="supenter()">
-     <!--  </form> -->
     </div>
 
     <div class="lede starthidden" id ="flat1">
       Flat1<br></div>
 
     <div class="lede">
-      <p>14 Grace Street<br>
-      Broadacre<br>
-      Wolverhampton<br>
-      WV1 9EA</p>
+      <p><span id="line1">14 Grace Street</span><br>
+      <span id="line2">Broadacre</span><br>
+      <span id="line3">Wolverhampton</span><br>
+      <span id="line4">WV1 9EA</span></p>
     </div>
 
     <div class="panel-indent" id="supquest">
       <a class="link" style="cursor:pointer;" onclick="showsupp();">
-      Add supplementary information
+      Add a line to the address
       </a>
       <br>
-      Adds an extra line to the address for a flat number or house name etc.
+      For example, a flat number or house name etc.
     </div>
     </div>
   </div>
@@ -210,7 +208,7 @@
  <div class="grid-row">
     <div class="column-full">
      <!--  <form id="form4" class="form"> -->
-      <p><!-- <a href="Confirmation" id="confbuttonlink" class="button disabled " >Confirm</a>  --><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" disabled/> <input id="cancbutton" type="button" class="button-secondary"value="Cancel" onclick="reset()" /></P>
+      <p><!-- <a href="Confirmation" id="confbutton" class="button disabled" >Confirm</a>  --><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" disabled/> <input id="cancbutton" type="button" class="button-secondary"value="Cancel" onclick="reset()" /></P>
 
       <ul>
         <li><a href="2COA_1">Back</a></li>

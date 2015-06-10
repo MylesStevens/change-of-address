@@ -42,18 +42,18 @@
     ];
 
     var cardiff = [
-      "1 Taff Street, Splot, Cardiff",
-      "2 Taff Street, Splot, Cardiff",
-      "3 Taff Street, Splot, Cardiff",
-      "4 Taff Street, Splot, Cardiff",
-      "5 Taff Street, Splot, Cardiff",
-      "6 Taff Street, Splot, Cardiff",
-      "7 Taff Street, Splot, Cardiff",
-      "8 Taff Street, Splot, Cardiff",
-      "9 Taff Street, Splot, Cardiff",
-      "10 Taff Street, Splot, Cardiff",
-      "",
-      ""
+      "1 Jack Street, Uplands, Swansea",
+      "2 Jack Street, Uplands, Swansea",
+      "3 Jack Street, Uplands, Swansea",
+      "4 Jack Street, Uplands, Swansea",
+      "5 Jack Street, Uplands, Swansea",
+      "6 Jack Street, Uplands, Swansea",
+      "7 Jack Street, Uplands, Swansea",
+      "8 Jack Street, Uplands, Swansea",
+      "9 Jack Street, Uplands, Swansea",
+      "10 Jack Street, Uplands, Swansea",
+      "11 Jack Street, Uplands, Swansea",
+      "12 Jack Street, Uplands, Swansea"
     ];
 
     form2.style.display = "block";
@@ -151,7 +151,23 @@
 
 <main id="page-container" role="main">
 
+<p class="heading-medium">
+      Your address
+    </p> 
+<div class="dwp-permission-group column-two-thirds">
+     <span class="heading-medium">Ms SARAH MEREDITH MORGAN</span>
 
+<div class="grid-row">
+
+        <div class="column-full"> 
+          <dd class="bold-small">122 Burns Crescent EDINBURGH  <span class="postcode">EH1 9GP</span>
+      
+
+        
+      
+    </dl>
+</div>    
+  </div>
 </div>
   <div class=" grid-row column-two-thirds">
   <p class="heading-medium">
@@ -166,11 +182,13 @@
            <input type="text" class="form-control"  id="postcode" name="postcode" onKeyDown="if (event.keyCode == 13) find_postcode()">
 
 
-          <br><br><input name="Findaddress" type="button" class="button-secondary" value="Find address" onclick="find_postcode()">
+          <input name="Findaddress" type="button" class="button-secondary" value="Find UK address" onclick="find_postcode()">
           
         <div id="manual">
     
-          
+            <p><a href="2COA_manual" class="toggle">
+                Enter address manually
+            </a></P>
         </div>
        <!-- </form> -->
    
@@ -180,7 +198,7 @@
 
 
 
-<div class="grid-row"><br> </div>
+<div class="grid-row "><br> </div>
 
 
 
@@ -225,7 +243,9 @@
         Your new address</div>
     <div class="validation-wrapper starthidden" id="supinfo">
       <!-- <form id="suppform"> -->
-     
+      Supplementary information
+      <span class="form-hint">For example, flat number or house name.</span>
+      <input type="text" class="form-control" id="supinfofield"  onKeyUp="if (event.keyCode == 13) supenter()"> <input name="Addaddress" type="button" class="button-secondary" value="Add line" onclick="supenter()">
      <!--  </form> -->
     </div>
 
@@ -240,10 +260,16 @@
       <span id="line4">WV1 9EA</span></p>
     </div>
 
-  
+    <div class="panel-indent" id="supquest">
+      <a class="link" style="cursor:pointer;" onclick="showsupp();">
+      Add a line to the address
+      <br>
+      For example, a flat number or house name etc.
+    </div>
+    </div>
   </div>
 
-</div>
+
 
  <div class="grid-row">
     <div class="column-full">

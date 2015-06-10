@@ -17,28 +17,78 @@
   
 
 <script>
-  function shownext() { 
+  function populate(data) {
+    var dropdown = document.getElementById('addressdropdown');
+    for(var i=1; i < dropdown.options.length; i++) {
+      dropdown.options[i].value = data[i-1];
+      dropdown.options[i].innerHTML = data[i-1];
+    }
+  }
+
+  function find_postcode() { 
+    var swansea = [
+      "1 Jack Street, Uplands, Swansea",
+      "2 Jack Street, Uplands, Swansea",
+      "3 Jack Street, Uplands, Swansea",
+      "4 Jack Street, Uplands, Swansea",
+      "5 Jack Street, Uplands, Swansea",
+      "6 Jack Street, Uplands, Swansea",
+      "7 Jack Street, Uplands, Swansea",
+      "8 Jack Street, Uplands, Swansea",
+      "9 Jack Street, Uplands, Swansea",
+      "10 Jack Street, Uplands, Swansea",
+      "11 Jack Street, Uplands, Swansea",
+      "12 Jack Street, Uplands, Swansea"
+    ];
+
+    var cardiff = [
+      "1 Taff Street, Splot, Cardiff",
+      "2 Taff Street, Splot, Cardiff",
+      "3 Taff Street, Splot, Cardiff",
+      "4 Taff Street, Splot, Cardiff",
+      "5 Taff Street, Splot, Cardiff",
+      "6 Taff Street, Splot, Cardiff",
+      "7 Taff Street, Splot, Cardiff",
+      "8 Taff Street, Splot, Cardiff",
+      "9 Taff Street, Splot, Cardiff",
+      "10 Taff Street, Splot, Cardiff",
+      "",
+      ""
+    ];
+
     form2.style.display = "block";
     manual.style.display = "none";
     document.getElementById('addressdropdown').focus()
 
+    var postcode = document.getElementById('postcode').value;
+    var county = postcode.toUpperCase().charAt(0);
+    if(county == "S") {
+      populate(swansea);
+    } else if(county == "C") {
+      populate(cardiff);
+    } else {
+      // leave as is
+    }
   }
 </script>
 
 <script>
-  function shownext2() { 
+  function update_address() { 
     var postcodeV = document.getElementById('postcode').value;
 
     var addressall = document.getElementById('addressdropdown').value;
 
-
   var addressalllist = addressall.split(",");
     form3.style.display = "block";
-     document.getElementById("line1").innerHTML = addressalllist[0];
-     document.getElementById("line2").innerHTML = addressalllist[1];
-     document.getElementById("line3").innerHTML = addressalllist[2];
-     document.getElementById("line4").innerHTML = postcodeV;
-     // document.getElementById("line1").innerHTML = addressalllist[0];
+
+        //document.getElementById("option1").innerHTML = "choose lif";
+
+      // document.getElementById("line1").innerHTML = addressalllist[0];
+      document.getElementById("line1").innerHTML = addressalllist[0];
+      document.getElementById("line2").innerHTML = addressalllist[1];
+      document.getElementById("line3").innerHTML = addressalllist[2];
+      document.getElementById("line4").innerHTML = postcodeV;
+    
     form2.style.display = "none";
     document.getElementById("confbutton").disabled = false; 
 
@@ -129,16 +179,14 @@
         Postcode</label>
         <span class="form-hint">For example, 'SA58ET'</span>
         
-           <input type="text" class="form-control"  id="postcode" name="postcode" onKeyDown="if (event.keyCode == 13) shownext()">
+           <input type="text" class="form-control"  id="postcode" name="postcode" onKeyDown="if (event.keyCode == 13) find_postcode()">
 
 
-          <input name="Findaddress" type="button" class="button-secondary" value="Find UK address" onclick="shownext()">
+          <br><br><input name="Findaddress" type="button" class="button-secondary" value="Find address" onclick="find_postcode()">
           
         <div id="manual">
     
-            <p><a href="2COA_manual" class="toggle">
-                Enter address manually
-            </a></P>
+          
         </div>
        <!-- </form> -->
    
@@ -148,7 +196,7 @@
 
 
 
-<div class="grid-row "><br> </div>
+<div class="grid-row"><br> </div>
 
 
 
@@ -159,8 +207,8 @@
         Select an address</label>
         
            <!-- <input type="drop-down" class="form-control" list=conditions id="drivernumber" name="housenum" > -->
-           <select class="form-control searchBox" id="addressdropdown" onchange="shownext2()">
-  <option value="Select closest Address...">Choose closest address...</option>
+           <select class="form-control searchBox" id="addressdropdown" onchange="update_address()">
+  <option value="Select Address..."> Select Address...</option>
   <option value="6 Grace Street, Broadacre, Wolverhampton">6 Grace Street, Broadacre, Wolverhampton</option>
   <option value="7 Grace Street, Broadacre, Wolverhampton">7 Grace Street, Broadacre, Wolverhampton</option>
   <option value="8 Grace Street, Broadacre, Wolverhampton">8 Grace Street, Broadacre, Wolverhampton</option>
@@ -193,9 +241,7 @@
         Your new address</div>
     <div class="validation-wrapper starthidden" id="supinfo">
       <!-- <form id="suppform"> -->
-      Supplementary information
-      <span class="form-hint">For example, flat number or house name.</span>
-      <input type="text" class="form-control" id="supinfofield"  onKeyUp="if (event.keyCode == 13) supenter()"> <input name="Addaddress" type="button" class="button-secondary" value="Add line" onclick="supenter()">
+     
      <!--  </form> -->
     </div>
 
@@ -203,22 +249,17 @@
       Flat1<br></div>
 
     <div class="lede">
-      <p><span id="line1">14 Grace Street</span><br>
+      <p>
+      <span id="line1">14 Grace Street</span><br>
       <span id="line2">Broadacre</span><br>
       <span id="line3">Wolverhampton</span><br>
       <span id="line4">WV1 9EA</span></p>
     </div>
 
-    <div class="panel-indent" id="supquest">
-      <a class="link" style="cursor:pointer;" onclick="showsupp();">
-      Add a line to the address
-      <br>
-      For example, a flat number or house name etc.
-    </div>
-    </div>
+  
   </div>
 
-
+</div>
 
  <div class="grid-row">
     <div class="column-full">
