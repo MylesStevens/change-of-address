@@ -5,7 +5,7 @@
 {{/head}}
 
 {{$propositionHeader}}
-  {{>includes/propositional_navigation}}
+  {{>includes/propositional_navigation_alpha}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -40,7 +40,7 @@
 <script>
   function nextscreen() { 
 
-    window.location.href ="2COA_1_finished.html";
+    window.location.href ="EndScreen.html";
 
   }
   
@@ -50,20 +50,28 @@
 
 <main id="page-container" role="main">
 
-<!-- <h1 class="form-title heading-medium">
-      Driving licence issue number
--->
+
+
+
 <div class="grid-row">
 <div class="column-full">
 <p></P>
 
         <div class="dwp-permission-group">
-            
 
-<!-- <p></P>  -->
 
 <p class="declarationheading">Declaration</p>
-<p class="font-small">I understand that the information I have entered is correct </p>
+<p class="font-small"><li>I understand that it is a criminal offence to make a false declaration or withhold material
+
+information in order to obtain a driving licence and that to do so can lead to prosecution 
+
+and a fine of up to £1,000 or imprisonment for a period of up to two years or both.</li><br>
+
+<li>I understand that it is a legal requirement that only one driving licence is held at one time 
+
+and confirm that I have cut my driving licence in two and will return it and my counterpart 
+
+document to DVLA.</li> </p>
 
    <input type="checkbox" id="dwpPermission" name="dwpPermission" value="1"  class ="double" style="margin-right: 20px; vertical-align: top;">
                 <span class="heading-small" style="vertical-align: bottom;">Check this box if you have read and understood the information presented here</span>
@@ -79,8 +87,6 @@
 <input name="Findaddress4" type="button" class="button" value="Continue" onclick="nextscreen()">  
 </div>
 </div>
-
-
 
 </main>
 

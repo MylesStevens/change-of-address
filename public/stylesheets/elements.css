@@ -795,6 +795,44 @@ fieldset {
 .js-enabled .focused input:focus {
   outline: none; }
 
+.block-label-blue {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  background: #D5E8F3;
+  border: 1px solid #dee0e2;
+  padding: 18px 30px 15px 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  @media (min-width: 641px) {
+    .block-label-blue {
+      float: left;
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+  .block-label-blue input {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    cursor: pointer; }
+  .block-label-blue:hover {
+    border-color: #0b0c0c; }
+
+.inline .block-label-blue {
+  clear: none;
+  margin-right: 15px; }
+
+.js-enabled label.selected {
+  background: #fff;
+  border-color: #0b0c0c; }
+
+.js-enabled label.focused {
+  outline: 3px solid #ffbf47; }
+
+.js-enabled .focused input:focus {
+  outline: none; }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
