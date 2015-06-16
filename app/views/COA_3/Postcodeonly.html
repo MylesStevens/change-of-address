@@ -38,7 +38,7 @@
       "9 Jack Street, Uplands, Swansea",
       "10 Jack Street, Uplands, Swansea",
       "11 Jack Street, Uplands, Swansea",
-      "12 Jack Street, Uplands, Swansea"
+      "My address is not here"
     ];
 
     var cardiff = [
@@ -52,7 +52,7 @@
       "8 Taff Street, Splot, Cardiff",
       "9 Taff Street, Splot, Cardiff",
       "10 Taff Street, Splot, Cardiff",
-      "",
+      "My address is not here",
       ""
     ];
 
@@ -78,17 +78,20 @@
 
     var addressall = document.getElementById('addressdropdown').value;
 
-  var addressalllist = addressall.split(",");
+    if (addressall == "My address is not here"){
+        freekey.style.display = "block";
+
+    } else{
+
+    var addressalllist = addressall.split(",");
     form3.style.display = "block";
+    freekey.style.display = "none";
 
-        //document.getElementById("option1").innerHTML = "choose lif";
-
-      // document.getElementById("line1").innerHTML = addressalllist[0];
       document.getElementById("line1").innerHTML = addressalllist[0];
       document.getElementById("line2").innerHTML = addressalllist[1];
       document.getElementById("line3").innerHTML = addressalllist[2];
       document.getElementById("line4").innerHTML = postcodeV;
-    
+    }
     form2.style.display = "none";
     document.getElementById("confbutton").disabled = false; 
 
@@ -148,7 +151,6 @@
 </header>
 
 
-
 <main id="page-container" role="main">
 
 <p class="heading-medium">
@@ -169,6 +171,8 @@
 </div>    
   </div>
 </div>
+
+
   <div class=" grid-row column-two-thirds">
   <p class="heading-medium">
       Tell us your new address
@@ -220,7 +224,7 @@
   <option value="14 Grace Street, Broadacre, Wolverhampton">14 Grace Street, Broadacre, Wolverhampton</option>
   <option value="15 Grace Street, Broadacre, Wolverhampton">15 Grace Street, Broadacre, Wolverhampton</option>
   <option value="Flat 1, 16 Grace Street, Broadacre, Wolverhampton">Flat 1, 16 Grace Street, Broadacre, Wolverhampton</option>
-  <option value="Flat 2, 16 Grace Street, Broadacre, Wolverhampton">Flat 2, 16 Grace Street, Broadacre, Wolverhampton</option>
+  <option value="My address is not here">My address is not here</option>
 
 </select>
            
@@ -260,6 +264,40 @@
   </div>
 
 </div>
+<div  class="grid-row starthidden" id="freekey">
+  <div class="column-full">
+    <form action="Confirmation" method="get" class="form">
+      <label class="form-label" for="Adress">
+        Enter your address manually
+        
+      </label>
+      <br>
+      <div class="validation-wrapper">
+         <!-- <label class="form-label" for="Adress">
+  Address line 1 </label> -->
+      <p><input type="text" class="form-control" id="Address1" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 2 </label> -->
+      <p><input type="text" class="form-control" id="Address2" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 3 </label> -->
+      <p><input type="text" class="form-control" id="Address3" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 4 </label> -->
+      <p><input type="text" class="form-control" id="Address4" maxlength="30"></p>
+      <label class="form-label" for="Adress">
+  Post town </label>
+      <p><input type="text" class="form-control" id="City" maxlength="30"></p>
+       <label class="form-label" for="Adress">
+  Post code </label>
+      <p><input type="text" class="form-control" id="PCODE" maxlength="8"></p>
+    </div>
+
+  </div>
+
+</div>
+
+
 
  <div class="grid-row">
     <div class="column-full">
