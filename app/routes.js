@@ -128,6 +128,15 @@ module.exports = {
     app.get('/alpha/'+version+'/D497', function (req, res) {
         res.render('alpha/'+version+'/D497', {'assetPath' : assetPath, 'flow': req.query.flow, 'conditions' : req.query.conditions, 'path' : req.query.path})
     });
+//////////
+    app.get('/NotifyDiab/specialcarcheck', function (req, res) {
+
+    var yin18a = req.query.eye1;
+
+   res.render('NotifyDiab/specialcar', {'assetPath' : assetPath, 'ROUTECHOICE' : yin18a})
+///////
+ 
+    });
 
   }
 
