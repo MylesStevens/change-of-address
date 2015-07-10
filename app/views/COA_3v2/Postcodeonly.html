@@ -1,0 +1,332 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/postcodes.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation_alpha}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+  <script>
+  function dofirst() {
+postcodetest= "{{postcode}}"
+var postcodetest = postcodetest.toUpperCase();
+
+if (postcodetest!=""){
+
+form2.style.display="block";
+postcodegroup.style.display = "none";
+document.getElementById('postcode').value = postcodetest;
+
+}
+  //  alert(postcodetest);
+  }
+
+  </script>
+
+
+
+<script>
+  function update_address() { 
+    var postcodeV = document.getElementById('postcode').value;
+
+    var addressall = document.getElementById('AddressDropdown').value;
+
+    
+
+    if (addressall == "My address is not here"){
+        freekey.style.display = "block";
+        form2.style.display = "none";
+        confbutton.style.display = "block";
+
+    } else{
+
+     var addressalllist = addressall.split(",");
+    // form3.style.display = "block";
+    freekey.style.display = "none";
+    showaddress.style.display = "block";
+    
+
+
+      document.getElementById("line1").innerHTML = addressalllist[0];
+      document.getElementById("line2").innerHTML = addressalllist[1];
+      document.getElementById("line3").innerHTML = addressalllist[2];
+      document.getElementById("line4").innerHTML = addressalllist[3];
+      document.getElementById("line5").innerHTML = addressalllist[4];
+
+      if (addressalllist[2]==""){
+
+        line3.style.display = "none";
+      }
+    }
+    form2.style.display = "none";
+    document.getElementById("confbutton").disabled = false; 
+
+  }
+</script>
+
+<script>
+  function shownext3() { 
+    form4.style.display = "block";
+
+  }
+</script>
+
+<script>
+   function reset() { 
+
+    window.location.href ="Postcodeonly.html";
+
+  }
+  
+</script>
+
+  <script>
+  function nextscreen() { 
+
+    window.location.href ="your-details-email.html";
+
+  }
+ </script>
+
+  <script>
+  function showsupp() { 
+    supinfo.style.display = "block";
+    supquest.style.display = "none";
+    document.getElementById('supinfofield').focus()
+    document.getElementById("confbutton").disabled = true;
+
+  }
+</script>
+
+<script>
+  function supenter() { 
+    var s1 = document.getElementById("supinfofield").value;
+    supinfo.style.display = "none";
+
+    document.getElementById("flat1").innerHTML = s1;
+    flat1.style.display = "block";
+
+    document.getElementById("confbutton").disabled = false;
+    document.getElementById('confbutton').focus();
+     
+
+  }
+</script>
+
+
+</header>
+
+<body onload="dofirst()">
+<main id="page-container" role="main">
+
+<p class="heading-medium">
+      The address on your driving licence
+    </p> 
+<div class="dwp-permission-group column-two-thirds">
+     <span class="heading-medium">Ms SARAH MEREDITH MORGAN</span>
+
+  <div class="grid-row">
+
+      <div class="column-full"> 
+          <dd class="bold-small">122 Burns Crescent EDINBURGH  <span class="postcode">EH1 9GP</span>
+      
+        </dl>
+      </div>    
+  </div>
+</div>
+
+
+  
+    
+  <div class="form-group" id ="postcodegroup">
+
+    <p class="heading-medium">
+      Tell us your new address
+    </p>
+
+    <form method="get" action="find-postcode2" class="form">
+       <label class="form-label" >
+        Postcode</label>
+        <span class="form-hint">For example, 'ID1 1QD'</span>
+        
+           <input type="text" style="text-transform:uppercase" class="form-control"  id="postcode" name="postcode" onKeyDown="if (event.keyCode == 13) find-postcode2()" autocomplete="off">
+
+
+          <br><br><input name="Findaddress" type="submit" class="button" value="Find address">
+  </div> 
+  
+  <div id="manual">
+    
+          
+  </div>
+     
+
+
+<div class="grid-row"><br> </div>
+
+   
+    <div class="form-group starthidden" id="form2">
+       <p class="heading-medium" for="select">
+        Select an address</p>
+        
+           <select class="form-control searchBox" name="udprn" id ="AddressDropdown"onchange="update_address()">
+      <option>{{result.length}} addresses were found</option>
+      {{#result}}
+
+        
+          <option value="{{line_1}},{{line_2}},{{line_3}},{{post_town}},{{postcode}}">{{line_1}} {{line_2}} {{post_town}}</option>
+
+         
+        
+
+      {{/result}}
+      <option value="My address is not here">My address is not here</option>
+      </select>
+
+     
+      </div>
+       
+
+ <div class="grid-row "></div>
+
+
+<div  class="grid-row starthidden" id="showaddress">
+  <div class="column-full">
+
+<div class="heading-medium" for="select">
+        Your new address</div>
+    <div class="validation-wrapper starthidden" id="supinfo">
+      <!-- <form id="suppform"> -->
+     
+     <!--  </form> -->
+    </div>
+
+    <div class="lede starthidden" id ="flat1">
+      Flat1<br></div>
+
+    <div class="lede" >
+      <p>
+      <div id="line1" style="padding:0; margin:0">line1</div>
+      <div id="line2" style="padding:0; margin:0">line2</div>
+      <div id="line3"  style="padding:0; margin:0">line3</div>
+      <div id="line4" style="padding:0; margin:0">post_town</div>
+      <div id="line5" style="padding:0; margin:0">postcode</div></p>
+
+    </div>
+ <div class="grid-row">
+    <div class="column-full">
+     
+      <p><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" disabled/> 
+<a href="javascript:reset();">Reset</a>
+       </P>
+
+      <ul>
+        <li><a href="2COA_1">Back</a></li>
+      </ul> 
+      <!-- </form> -->
+    </div>
+  </div>
+  
+  </div>
+
+</div>
+<div  class="grid-row starthidden" id="freekey">
+  <div class="column-full">
+    <form action="Confirmation" method="get" class="form">
+      <p class="heading-medium" for="Adress">
+        Enter your address manually
+        
+      
+      <br>
+      <div class="validation-wrapper">
+         <label class="form-label" for="Adress">
+  Address </label>
+      <p><input type="text" class="form-control" id="Address1" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 2 </label> -->
+      <p><input type="text" class="form-control" id="Address2" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 3 </label> -->
+      <p><input type="text" class="form-control" id="Address3" maxlength="30"></p>
+      <!-- <label class="form-label" for="Adress">
+  Address line 4 </label> -->
+      <p><input type="text" class="form-control" id="Address4" maxlength="30"></p>
+      <label class="form-label" for="Adress">
+  Post town </label>
+      <p><input type="text" class="form-control" id="City" maxlength="30"></p>
+       <label class="form-label" for="Adress">
+  Post code </label>
+      <p><input type="text" class="form-control" id="PCODE" maxlength="8"></p>
+    </div>
+
+     <div class="grid-row">
+    <div class="column-full">
+     
+      <p><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" /> <a href="javascript:reset();">Reset</a></P>
+
+      <ul>
+        <li><a href="2COA_1">Back</a></li>
+      </ul> 
+      <!-- </form> -->
+    </div>
+  </div>
+  
+  </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+ 
+<!--  </form> -->
+       
+</main>    
+</body>
+    
+ <!--  <div  id="supquest">
+
+      <input name="Supplementaryinformation" type="button" class="button-secondary" value="Add supplementary information" onclick="showsupp(); return false;">
+
+
+
+         <span class="form-hint">
+          Adds an extra line to the address for a flat number or house name etc.
+          
+        </span>
+  </div> -->    
+
+
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -1,0 +1,168 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation2}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+  function FindAddress2() { 
+
+var postcodeV = document.forms["form1"]["postcode"].value;
+
+if (postcodeV ==""){
+document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
+}
+else{
+
+
+    window.location.href ="2COA_2.html";
+  }
+  
+  }
+  //document.getElementById("MyElement").className = "MyClass";
+  </script>
+
+</header>
+
+
+<main id="page-container" role="main">
+
+
+
+<div id="wrapper" class="transaction service">
+    <main id="content" role="main" class="group">
+        
+            
+
+</div>
+    
+
+
+
+<div class="right"><p><a href="../index" >Log out </a></P></div>
+
+
+
+
+<div class="grid-row">
+<p><img src="../public/images/faketabs.png" name="faketabs"/></p></div>
+
+
+
+    <h2 class="visuallyhidden">Personal Details</h2>
+    <dl>
+        <dt class="visually hidden">Name</dt>
+       <div><h2 class="heading-large">Ms SARAH MEREDITH MORGAN</h2></div>
+       
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Date of birth</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">10 Mar 1973</dd>
+          </div>
+       </div>
+
+
+         <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Gender</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">Female</dd>
+          </div>
+       </div>
+
+         <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Address</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">6 Jack Street Uplands SWANSEA <span class="postcode">SA58ET</span>
+          </div>
+          <div class="column-quarter"> 
+    
+          <dt ><p class="button disabled" >Change address </p></dt></div>
+   
+  </div>
+       </div>
+         
+          
+
+        
+<dl>
+    
+    <div><h2 class="heading-large">Licence details</h2> </div>
+
+    <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Driving status</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">You have a provisional driving licence</dd>
+          </div>
+       </div>
+
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Licence valid from</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">24 Sep 2013</dd>
+          </div>
+       </div>
+
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Licence valid to</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">23 Sep 2023</dd>
+          </div>
+       </div>
+
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Driving licence number</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">MORGA753116SM9IJ</dd>
+          </div>
+       </div>
+
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Issue number</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">05</dd>
+          </div>
+       </div>
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

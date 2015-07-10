@@ -138,13 +138,76 @@ module.exports = {
  
     });
 
+    app.get('/COA_3v2/find-postcode', function (req, res) {
+
+      /*var Handlebars = require('Handlebars');*/
+     
+
+      var postcode = req.query.postcode;
+
+
+      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
+
+        // console.log(results); 
+        res.render('COA_3v2/evl-paydd-postcode', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+
+      });
+        
+    });
+    ////////////
+    app.get('/COA_3v2/find-postcode2', function (req, res) {
+
+      /*var Handlebars = require('Handlebars');*/
+     
+
+      var postcode = req.query.postcode;
+
+// ak_i0ze7k03RQwMtjncypybi4nQOE97T-- pauls
+// ak_ibah3xqei01TCHgxRQqH36ilJkiqX-- mine
+      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
+
+        // console.log(results); 
+        res.render('COA_3v2/Postcodeonly', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+
+      });
+        
+    });
+    
+     app.get('/COA_2v2/find-postcode2', function (req, res) {
+
+      /*var Handlebars = require('Handlebars');*/
+     
+
+      var postcode = req.query.postcode;
+
+// ak_i0ze7k03RQwMtjncypybi4nQOE97T
+
+      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
+
+        // console.log(results); 
+        res.render('COA_2v2/Postcodeonly', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+
+      });
+        
+    });
+
   }
 
 };
 
 
-/* for getting lots of variables out of a string...
-String[] str_array = "name:score".split(":");
-String stringa = str_array[0]; 
-String stringb = str_array[1];
-*/
