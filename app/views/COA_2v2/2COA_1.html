@@ -13,54 +13,139 @@
 {{$content}}
 <header class="page-header">
 
+  <link href="/public/javascripts/main.css" media="screen" rel="stylesheet" type="text/javascript">
+
+  <link rel="stylesheet" href="../public/stylesheets/application_vdl.css">
+
 <script>
-  function FindAddress2() { 
+  function your_details() { 
+    // alert("this is working!");
+    your_details_panel.style.display = "block";
 
-var postcodeV = document.forms["form1"]["postcode"].value;
+    vehicles_panel.style.display = "none";
 
-if (postcodeV ==""){
-document.getElementById("postcodeerror").innerHTML = "Please complete all the fields";
-}
-else{
+    points_panel.style.display = "none";
+
+    share_panel.style.display = "none";
 
 
-    window.location.href ="2COA_2.html";
   }
-  
+
+
+</script>
+
+<script>
+  function Penalties() { 
+    
+    your_details_panel.style.display = "none";
+
+    vehicles_panel.style.display = "none";
+
+    points_panel.style.display = "block";
+
+    share_panel.style.display = "none";
   }
-  //document.getElementById("MyElement").className = "MyClass";
-  </script>
+
+
+</script>
+
+<script>
+  function Vehicles_drive() { 
+       
+    your_details_panel.style.display = "none";
+
+    vehicles_panel.style.display = "block";
+
+    points_panel.style.display = "none";
+
+    share_panel.style.display = "none";
+
+  }
+
+
+</script>
+
+<script>
+  function share_your_licence() { 
+    your_details_panel.style.display = "none";
+
+    vehicles_panel.style.display = "none";
+
+    points_panel.style.display = "none";
+
+    share_panel.style.display = "block";
+  }
+
+
+</script>
+
+
 
 </header>
 
 
-<main id="page-container" role="main">
-
-
-
-<div id="wrapper" class="transaction service">
     <main id="content" role="main" class="group">
         
-            
+
+
+
+
+    
+<div class="outer-block">
+    <div class="inner-block">
+        <nav class="nav-proposition">
+            <div id="proposition-links-4">
+                <ul>
+                    <li class="left-nav-element">
+                        
+
+
+<div class="phase-banner">
+    <p>
+        We welcome your
+        <a href="#" target="_blank">
+            feedback
+        </a>
+        to help us improve this service
+    </p>
+</div>
+
+                    </li>
+                    <li>
+                        <a href="../index" id="logoutLink">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+
+
+
+<div class="grid-row" style=" margin-left: 30px; margin-right: 30px">
+
+
+<nav class="activity-navigation">
+    <ul class="tabs">
+        <li><a href="javascript:your_details();" class="current">Your details</a></li>
+        <li><a href="javascript:Vehicles_drive();" class="">Vehicles you can drive</a></li>
+        <li><a href="javascript:Penalties();" class="">Penalties and disqualifications</a></li>
+        
+            <li>
+                <a href="javascript:share_your_licence();">Share your licence information
+                    <strong class="phase-tag beta-phase orange" >BETA</strong>
+                </a>
+            </li>
+        
+    </ul>
+</nav>
 
 </div>
-    
-
-
-
-<div class="right"><p><a href="../index" >Log out </a></P></div>
-
-
-
-
-<div class="grid-row">
-<p><img src="../public/images/faketabs.png" name="faketabs"/></p></div>
-
-<!-- <div id="your-details" class="" style="display: block;">
-    <div>
-        <p>To update your details or renew your licence visit the <a href="https://www.gov.uk/browse/driving/driving-licences" target="_blank">driving licence</a> section on GOV.UK</p>
-    </div> -->
-
+<!-- //////////////////// -->
+<div id="your_details_panel">
+<div class="grid-row" style=" margin-left: 30px; margin-right: 30px">
     <h2 class="visuallyhidden">Personal Details</h2>
     <dl>
         <dt class="visually hidden">Name</dt>
@@ -106,7 +191,7 @@ else{
 
         
 <dl>
-    
+    <div class="grid-row" style=" margin-left: 30px; margin-right: 30px">
     <div><h2 class="heading-large">Licence details</h2> </div>
 
     <div class="grid-row">
@@ -158,6 +243,713 @@ else{
             <dd class="bold-small">05</dd>
           </div>
        </div>
+       </div>
+</div>
+
+
+ <!-- ////////////////////////////  -->
+
+
+<div id="vehicles_panel" class=" stathidden" style="display: none;">
+
+  <!-- style="display: none;" -->
+     
+         
+         
+             <div>
+                <p>To find out more visit the <a href="#" target="_blank">driving licence categories</a> section on GOV.UK</p>
+             </div>
+   
+
+       <h2>Vehicles you can provisionally drive</h2>
+    <ul class="accordion" id="provEntitlements">
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : AM</strong></li>
+                                
+                                <li class="valid-dates">Start date: 24 Sep 2013</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category AM vehicle" src="../Public/images/View your driving licence information_files/AM.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catAM" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 24 Sep 2013</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive 2-wheel vehicles or 3-wheel vehicles with a maximum design speed of over 25km/h and not more than 45km/h. Light quadricycles with an unladen mass of not more than 350kg, not including the mass of the batteries in the case of electric vehicles, whose maximum speed is over 25km/h and not more than 45km/h</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : A</strong></li>
+                                
+                                <li class="valid-dates">Start date: 24 Sep 2013</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category A vehicle" src="../Public/images/View your driving licence information_files/A.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catA" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 24 Sep 2013</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive a motorcycle of a power exceeding 35kW or with a power to weight ratio exceeding 0.2kW per kg, or A motorcycle of a power not exceeding 35kW with a power to weight ratio not exceeding 0.2kW per kg and derived from a vehicle of more than double its power. A motor tricycle with a power exceeding 15kW</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : B</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category B vehicle" src="../Public/images/View your driving licence information_files/B.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catB" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive vehicles up to 3,500kg Maximum Authorised Mass (MAM) with up to 8 passenger seats and a driver (with a trailer up to 750kg). You can also tow heavier trailers if the total weight of vehicle and trailer isn’t more than 3,500kg. Physically disabled drivers with provisional category B entitlement will also have provisional entitlement to ride category A1 or A motor tricycles. Able-bodied drivers can no longer ride motor tricycles with a provisional category B licence</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : C1</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category C1 vehicle" src="../Public/images/View your driving licence information_files/C1.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catC1" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive vehicles weighing between 3,500 and 7,500kg (with a trailer up to 750kg), with no more than 8 passengers and a driver</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : D1</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category D1 vehicle" src="../Public/images/View your driving licence information_files/D1.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catD1" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive vehicles with no more than 16 passenger seats and a driver and with a maximum length not exceeding 8 metres with a trailer up to 750kg</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : F</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                        <img alt="Image of category F vehicle" src="../Public/images/View your driving licence information_files/F.png" class="category-img">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catF" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive an agricultural or forestry tractor</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : G</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catG" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive a road roller</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : H</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catH" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive tracked vehicles</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : K</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catK" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive a mowing machine or vehicles controlled by someone on foot</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : L</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catL" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive an electrically-propelled vehicle</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : N</strong></li>
+                                
+                                <li class="valid-dates">Start date: 2 Jun 1989</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catN" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 2 Jun 1989</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive vehicles exempt from Vehicle Excise Duty</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li>
+            
+            <div class="accordion-group">
+                <a href="#" class="toggle">
+                    <div class="detail-wrapper">
+                        
+                        <div class="detail-col-noimage">
+                        
+                            <ul class="detail">
+                                <li class="category"><strong>Category : Q</strong></li>
+                                
+                                <li class="valid-dates">Start date: 24 Sep 2013</li>
+                                <li class="valid-dates">End date: 1 Jun 2042</li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                  <span class="img-holder">
+                    
+                  </span>
+                  <span class="more">
+                    <span class="up"></span> <em>Show information <img alt="" src="../Public/images/View your driving licence information_files/circle-plus@2x.png" width="16px"></em>
+                  </span>
+                </a>
+            </div>
+            
+            <div id="catQ" class="accordion-content" style="display: none;">
+                <ul class="grid drive">
+                    
+                    
+                    <li class="valid-dates">
+                        <h4>Dates</h4>
+                        <ul>
+                            <li>Start date: 24 Sep 2013</li>
+                            <li>End date: 1 Jun 2042 </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="description">
+                        <h4>Description</h4>
+                        <p>You can drive motor vehicles with fewer than 4 wheels which, if propelled by an internal combustion engine, has a cylinder capacity not exceeding 50cc and, if not equipped with pedals by means of which the vehicle is capable of being propelled, has a maximum design speed not exceeding 25km/h</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+    </ul>
+    
+</div>    
+</div>
+
+
+<div id="points_panel" class="starthidden" >
+    
+        <div>
+            <p>To find out more visit the <a href="#" >penalty points</a> and <a href="#" >disqualifications</a> sections on GOV.UK</p>
+        </div>
+        <h2>
+            <span>You have</span>0 current penalty points</h2>
+
+    
+</div>
+
+<!-- ///////////////// -->
+
+ <div id="share_panel" class="grid-wrapper starthidden">
+            
+
+<div class="">
+    <p>
+        <strong class="phase-tag beta-phase orange" >BETA</strong>
+        <span style="font-size: 11pt">
+            This is a new service – your <a href="#" target="_blank">feedback</a> will help us to improve it.
+        </span>
+    </p>
+</div>
+            
+                
+
+
+<div class="grid grid-2-3">
+    <div class="inner-block">
+        <div class="text">
+            
+            <h1 class="share-tab-heading">Get a licence check code</h1>
+            
+            
+            <p>You can share your licence information with someone else, like your employer or a car hire firm.</p>
+            <p>You’ll need to give them:</p>
+            <ul class="list-bullet">
+                <li>a unique licence check code</li>
+                <li>the last 8 characters of your driving licence number</li>
+            </ul>
+            
+            
+             
+
+<!-- <form action="#" method="POST"> -->
+    
+                <p><input type="submit" class="button" value="Create a code"></p>
+            
+</form>
+
+        </div>
+        <h2 class="heading-small">Active codes</h2>
+        
+        <h3>You have no active code(s) to view</h3>
+        
+        <h2 class="heading-small">Inactive codes</h2>
+        
+        <h3>You have no inactive code(s) to view</h3>
+        
+    </div>
+</div>
+<div class="grid grid-1-3">
+    <div class="inner-block">
+        <nav>
+            <p class="extra-info">Make sure that the person you’ve shared your code with can accept this form of licence checking.</p>
+        </nav>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+
+        </article>
+    </main>
+</div>
+
+
+
    
 
 

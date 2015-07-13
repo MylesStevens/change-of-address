@@ -17,12 +17,16 @@
 <main id="page-container" role="main">
 
     <h1 class="form-title heading-medium">
-      Contact details      
+
+     
+
+
+      Contact details  
 
     </h1>
     <p> If you'd like a confirmation email of your change of address, tell us your email address here.
 
- <form id="form1" action="your-details-mobile.html" method="get" class="form">
+ <form id="form1" action="send_address2" method="get" class="form">
    
     <div class="form-group">
        <label class="form-title heading-medium" for="drivernum">
@@ -31,7 +35,7 @@
         <span class="form-hint">
           For example, 'you@mail.co.uk'
            </span>
-           <input type="text" maxlength="16" class="form-control" id="drivernumber"  >
+           <input type="text" class="form-control" id="email"  name="email" autocomplete="off">
           <br>
       
     </div>
@@ -40,10 +44,10 @@
      <p></p>
        
 
-<div class="grid-row">
+    <div class="grid-row">
    <div class="column-full">
    <br>
-      <button type="submit" id="sub" class="button" name = "sub" value="" >
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" >
         Continue
     </button>
     

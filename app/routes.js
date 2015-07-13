@@ -205,6 +205,90 @@ module.exports = {
       });
         
     });
+//////////////////////
+
+     app.get('/COA_2v2/send_address', function (req, res) {
+
+      var addressall1 = req.query.newconf;
+
+        res.render('COA_2v2/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+
+      });
+
+     app.get('/COA_2v2/send_address2', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var email1 = req.query.email;
+
+
+
+        res.render('COA_2v2/your-details-mobile', {'assetPath' : assetPath, 'addressall1' : addressall1, 'email' : email1})
+
+      });
+
+      app.get('/COA_2v2/send_address3', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var addressalllist = addressall1.split(",");
+ 
+
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
+      var email1 = addressalllist[5];
+
+      var mobile = req.query.mobilenumber;
+
+        res.render('COA_2v2/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+
+      });
+        
+    
+///////////////////////
+ app.get('/COA_3v2/send_address', function (req, res) {
+
+      var addressall1 = req.query.newconf;
+
+        res.render('COA_3v2/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+
+      });
+
+     app.get('/COA_3v2/send_address2', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var email1 = req.query.email;
+
+
+
+        res.render('COA_3v2/your-details-mobile', {'assetPath' : assetPath, 'addressall1' : addressall1, 'email' : email1})
+
+      });
+
+      app.get('/COA_3v2/send_address3', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var addressalllist = addressall1.split(",");
+ 
+
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
+      var email1 = addressalllist[5];
+
+      var mobile = req.query.mobilenumber;
+
+        res.render('COA_3v2/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+
+      });
+        
 
   }
 

@@ -1,0 +1,168 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation_alpha}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+
+
+  
+
+<script>
+  function shownext() { 
+    form2.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function shownext2() { 
+    form3.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function shownext3() { 
+    form4.style.display = "block";
+
+  }
+</script>
+
+<script>
+  function nextscreen() { 
+
+    window.location.href ="2COA_1_finished.html";
+
+  }
+  
+  </script>
+</header>
+
+
+<main id="page-container" role="main">
+
+  <h1 class="form-title heading-medium">
+
+     
+
+
+      Summary    
+    </h1>
+    <p>
+      Check the information below and click continue</P>
+
+    <div class="grid-row" style=" margin-left: 30px; margin-right: 30px">
+   
+    <dl>
+        <dt class="visually hidden">Name</dt>
+       <div><h2 class="heading-medium">Ms SARAH MEREDITH MORGAN</h2></div>
+       <hr>
+       
+       <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Date of birth</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">10 Mar 1973</dd>
+          </div>
+       </div>
+        <hr>
+
+         <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Gender</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">Female</dd>
+          </div>
+       </div>
+      <hr>
+         <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Address</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">{{address1}}  </dd>
+            <dd class="bold-small">{{address2}}  </dd>
+             <dd class="bold-small">{{address3}}  </dd>
+              <dd class="bold-small">{{address4}}  </dd>
+               <dd class="bold-small">{{address5}}  </dd>
+          </div>
+
+          <div class="column-quarter"> 
+    
+          <dd ><a href="Postcodeonly.html"  >Change </a></dd> 
+        </div> 
+      </div>
+       <hr>
+           <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Email address</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">{{email}}  </dd>
+          </div>
+          <div class="column-quarter"> 
+    
+          <dd><a href="#"  >Change </a></dd> </div>
+        </div>
+         <hr>
+             <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Mobile phone number</dt>
+        </div>
+
+          <div class="column-half"> 
+            <dd class="bold-small">{{mobilenum}} </dd>
+          </div>
+          <div class="column-quarter"> 
+    
+          <dt ><a href="#"  >Change </a></dt> </div>
+
+
+
+        </div>
+    <hr>
+  </div>
+       </div>
+
+       <div class="grid-row">
+   <div class="column-full">
+
+    <form id="form1" action="Confirmation.html" method="get" class="form">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="" >
+        Continue
+    </button>
+
+     </div>
+       </div>
+
+       
+
+</main>
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

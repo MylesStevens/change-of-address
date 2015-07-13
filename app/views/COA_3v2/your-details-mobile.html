@@ -17,12 +17,12 @@
 <main id="page-container" role="main">
 
     <h1 class="form-title heading-medium">
-      Contact details      
-
+      Contact details 
+      
     </h1>
     <p> If you'd like a confirmation text of your details, tell us your mobile phone number here.
 
- <form id="form1" action="Confirmation.html" method="get" class="form">
+ <form id="form1" action="send_address3" method="get" class="form">
    
     <div class="form-group">
        <label class="form-title heading-medium" for="drivernum">
@@ -31,7 +31,7 @@
         <span class="form-hint">
           For example, '07570123456'
            </span>
-           <input type="text" maxlength="16" class="form-control" id="mobilenumber"  onkeypress="return event.charCode >= 48 && event.charCode <= 57" onKeyDown="if (event.keyCode == 13) { this.form.submit(); return false; }" autocomplete="off">
+           <input type="text" maxlength="16" class="form-control" id="mobilenumber"  name="mobilenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off">
           <br>
       
     </div>
@@ -43,7 +43,7 @@
 <div class="grid-row">
    <div class="column-full">
    <br>
-      <button type="submit" id="sub" class="button" name = "sub" value="" >
+     <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}},{{email}}" >
         Continue
     </button>
     

@@ -76,6 +76,7 @@ document.getElementById('postcode').value = postcodetest;
     }
     form2.style.display = "none";
     document.getElementById("confbutton").disabled = false; 
+    document.getElementById("newconf").value = addressalllist;
 
   }
 </script>
@@ -206,7 +207,7 @@ document.getElementById('postcode').value = postcodetest;
     <div class="lede starthidden" id ="flat1">
       Flat1<br></div>
 
-    <div class="lede" >
+    <div class="lede" name="bingo">
       <p>
       <div id="line1" style="padding:0; margin:0">line1</div>
       <div id="line2" style="padding:0; margin:0">line2</div>
@@ -217,9 +218,15 @@ document.getElementById('postcode').value = postcodetest;
     </div>
  <div class="grid-row">
     <div class="column-full">
-     
-      <p><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" disabled/> 
-<a href="javascript:reset();">Reset</a>
+     </form>
+       <form action="send_address" method="GET">
+
+                <p><button type="submit" name ="newconf" id="newconf" class="button">Confirm </button><a href="javascript:reset();">Reset</a>
+</form>
+       
+
+
+
        </P>
 
       <ul>
@@ -265,6 +272,8 @@ document.getElementById('postcode').value = postcodetest;
     <div class="column-full">
      
       <p><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" /> <a href="javascript:reset();">Reset</a></P>
+
+      
 
       <ul>
         <li><a href="2COA_1">Back</a></li>
