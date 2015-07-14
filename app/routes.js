@@ -169,7 +169,7 @@ module.exports = {
 
 // ak_i0ze7k03RQwMtjncypybi4nQOE97T-- pauls
 // ak_ibah3xqei01TCHgxRQqH36ilJkiqX-- mine
-      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+      var idealPostcodes = require("ideal-postcodes")("ak_ibah3xqei01TCHgxRQqH36ilJkiqX")
 
       idealPostcodes.lookupPostcode(postcode, function (error, results) {
         if (error) {
@@ -192,7 +192,7 @@ module.exports = {
 
 // ak_i0ze7k03RQwMtjncypybi4nQOE97T
 
-      var idealPostcodes = require("ideal-postcodes")("ak_i0ze7k03RQwMtjncypybi4nQOE97T")
+      var idealPostcodes = require("ideal-postcodes")("ak_ibah3xqei01TCHgxRQqH36ilJkiqX")
 
       idealPostcodes.lookupPostcode(postcode, function (error, results) {
         if (error) {
