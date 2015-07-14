@@ -52,7 +52,7 @@ document.getElementById('postcode').value = postcodetest;
     if (addressall == "My address is not here"){
         freekey.style.display = "block";
         form2.style.display = "none";
-        confbutton.style.display = "block";
+        newconf2.style.display = "block";
 
     } else{
 
@@ -239,39 +239,44 @@ document.getElementById('postcode').value = postcodetest;
   </div>
 
 </div>
+
+<!-- ////////////FREEKEY////////////// -->
 <div  class="grid-row starthidden" id="freekey">
   <div class="column-full">
-    <form action="Confirmation" method="get" class="form">
+    <!-- <form action="Confirmation" method="get" class="form"> -->
       <p class="heading-medium" for="Adress">
         Enter your address manually
         
       
       <br>
       <div class="validation-wrapper">
-         <label class="form-label" for="Adress">
-  Address </label>
-      <p><input type="text" class="form-control" id="Address1" maxlength="30"></p>
-      <!-- <label class="form-label" for="Adress">
-  Address line 2 </label> -->
-      <p><input type="text" class="form-control" id="Address2" maxlength="30"></p>
-      <!-- <label class="form-label" for="Adress">
-  Address line 3 </label> -->
-      <p><input type="text" class="form-control" id="Address3" maxlength="30"></p>
-      <!-- <label class="form-label" for="Adress">
-  Address line 4 </label> -->
-      <p><input type="text" class="form-control" id="Address4" maxlength="30"></p>
+        <Form action="sendaddress_freekey1" method="GET">         
+
+        <label class="form-label" for="Adress">
+      Address </label>
+      <p><input type="text" class="form-control" id="Address1" name="A1" maxlength="30"></p>
+      
+      <p><input type="text" class="form-control" id="Address2" name="A2" maxlength="30"></p>
+  
+      <p><input type="text" class="form-control" id="Address3" name="A3" maxlength="30"></p>
       <label class="form-label" for="Adress">
-  Post town </label>
-      <p><input type="text" class="form-control" id="City" maxlength="30"></p>
-       <label class="form-label" for="Adress">
-  Post code </label>
-      <p><input type="text" class="form-control" id="PCODE" maxlength="8"></p>
+      Post town </label>
+      <p><input type="text" class="form-control" id="City" name="A4" maxlength="30"></p>
+      <label class="form-label" for="Adress">
+      Postcode </label>
+      <p><input type="text" class="form-control" id="PCODE" name="PC" maxlength="8"></p>
     </div>
 
      <div class="grid-row">
     <div class="column-full">
-     
-      <p><input id="confbutton" type="button" class="button"value="Confirm" onclick="nextscreen()" /> <a href="javascript:reset();">Reset</a></P>
+    
+
+    
+
+    <p><button type="submit" name ="newconf2" id="newconf2" class="button">Confirm </button><a href="javascript:reset();">Reset</a>
+    </form>
+
+
 
       
 

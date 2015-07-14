@@ -257,7 +257,8 @@ module.exports = {
 
       });
 
-     app.get('/COA_3v2/send_address2', function (req, res) {
+
+  app.get('/COA_3v2/send_address2', function (req, res) {
 
       var addressall1 = req.query.sub;
 
@@ -288,6 +289,73 @@ module.exports = {
         res.render('COA_3v2/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
 
       });
+
+
+       app.get('/COA_2v2/sendaddress_freekey1', function (req, res) {
+
+      
+
+      var line1= req.query.A1;
+      if (line1 == "undefined"){
+        line1=" ";
+      }
+      var line2 = req.query.A2;
+      if (line2 == "undefined"){
+        line2=" ";
+      }
+      var line3= req.query.A3;
+      if (line3 == "undefined"){
+        line3="";
+      }
+      var line4 = req.query.A4;
+      if (line4 == "undefined"){
+        line4=" ";
+      }
+      var line5 = req.query.PC;
+      if (line5 == "undefined"){
+        line5=" ";
+      }
+
+      var addressall1 = line1+","+line2+","+line3+","+line4+","+line5
+
+      
+  res.render('COA_2v2/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+        
+
+      });
+
+      app.get('/COA_3v2/sendaddress_freekey1', function (req, res) {
+
+      
+
+      var line1= req.query.A1;
+      if (line1 == "undefined"){
+        line1=" ";
+      }
+      var line2 = req.query.A2;
+      if (line2 == "undefined"){
+        line2=" ";
+      }
+      var line3= req.query.A3;
+      if (line3 == "undefined"){
+        line3="";
+      }
+      var line4 = req.query.A4;
+      if (line4 == "undefined"){
+        line4=" ";
+      }
+      var line5 = req.query.PC;
+      if (line5 == "undefined"){
+        line5=" ";
+      }
+
+      var addressall1 = line1+","+line2+","+line3+","+line4+","+line5
+
+      
+  res.render('COA_3v2/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+        
+
+      });  
         
 
   }
