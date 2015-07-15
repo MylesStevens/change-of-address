@@ -75,7 +75,7 @@ document.getElementById('postcode').value = postcodetest;
       }
     }
     form2.style.display = "none";
-    document.getElementById("confbutton").disabled = false; 
+    // document.getElementById("confbutton").disabled = false; 
     document.getElementById("newconf").value = addressalllist;
 
   }
@@ -110,7 +110,7 @@ document.getElementById('postcode').value = postcodetest;
     supinfo.style.display = "block";
     supquest.style.display = "none";
     document.getElementById('supinfofield').focus()
-    document.getElementById("confbutton").disabled = true;
+    // document.getElementById("confbutton").disabled = true;
 
   }
 </script>
@@ -123,8 +123,8 @@ document.getElementById('postcode').value = postcodetest;
     document.getElementById("flat1").innerHTML = s1;
     flat1.style.display = "block";
 
-    document.getElementById("confbutton").disabled = false;
-    document.getElementById('confbutton').focus();
+    // document.getElementById("confbutton").disabled = false;
+    // document.getElementById('confbutton').focus();
      
 
   }
@@ -221,7 +221,7 @@ document.getElementById('postcode').value = postcodetest;
      </form>
        <form action="send_address" method="GET">
 
-                <p><button type="submit" name ="newconf" id="newconf" class="button">Confirm </button><a href="javascript:reset();">Reset</a>
+                <p><button type="submit" name ="newconf" id="newconf" class="button" >Confirm </button><a href="javascript:reset();">Reset</a>
 </form>
        
 
@@ -243,7 +243,7 @@ document.getElementById('postcode').value = postcodetest;
 <!-- ////////////FREEKEY////////////// -->
 <div  class="grid-row starthidden" id="freekey">
   <div class="column-full">
-    <!-- <form action="Confirmation" method="get" class="form"> -->
+   
       <p class="heading-medium" for="Adress">
         Enter your address manually
         
