@@ -12,7 +12,36 @@
 
 {{$content}}
 <header class="page-header">
+
+<script>
+function showerrors() { 
+
+
+var emailV = "{{email}}";
+
+
+
+
+if (emailV == ""  ) {}
+
+else{
+
+
+validation_message.style.display = "block";
+ document.getElementById("emailfieldname").className = "form-title heading-medium validation-summary-field-div";
+ document.getElementById("email").className = "validation-summary-input form-control";
+  document.getElementById("hint").className = "form-hint validation-summary-field-div";
+  document.getElementById("email").value = emailV;
+
+
+}
+}
+
+</script>
+
 </header>
+
+<body onload="showerrors()">
 
 <main id="page-container" role="main">
 <p style= "color:grey" class="form-hint" >
@@ -27,25 +56,28 @@
  <form id="form1" action="send_address2" method="get" class="form">
    
     <div class="form-group">
-       <label class="form-title heading-medium" for="drivernum">
+       <label class="form-title heading-medium" for="drivernum" id="emailfieldname">
         
         Your email address </label>
-        <span class="form-hint">
+        <span class="form-hint" id="hint">
           For example, 'you@mail.co.uk'
            </span>
            <input type="text" class="form-control" id="email"  name="email" autocomplete="off">
-          <br>
-      
+        
     </div>
-    
+    <div class="grid-row"  >
+   <div class="column-full">
+<p  id="validation_message" class="heading-validation-message starthidden">Please enter a valid email address</p>
+    </div>
+    </div>
 
-     <p></p>
+     
        
 
     <div class="grid-row">
    <div class="column-full">
    <br>
-      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" >
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}">
         Continue
     </button>
     
@@ -60,7 +92,7 @@
     </div>
 
     
-
+</body>
     
 </main>
 

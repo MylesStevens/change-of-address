@@ -87,11 +87,24 @@ module.exports = {
 
       var email1 = req.query.email;
 
+      var re = /\S+@\S+\.\S+/;
 
+ if (email1  == ""){
+              res.render('COA_Direct_v3/your-details-mobile', {'assetPath' : assetPath, 'addressall1' : addressall1, 'email' : email1});
+                  }    
+
+
+
+if (re.test(email1) == false){
+  
+  res.render('COA_Direct_v3/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1, 'email' : email1})
+
+} else {
 
         res.render('COA_Direct_v3/your-details-mobile', {'assetPath' : assetPath, 'addressall1' : addressall1, 'email' : email1})
-
+}
       });
+    
 
     app.get('/COA_Direct_v3/send_address3', function (req, res) {
 
