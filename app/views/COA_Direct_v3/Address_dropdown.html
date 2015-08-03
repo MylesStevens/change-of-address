@@ -1,0 +1,175 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/postcodes.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation_alpha}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+    function dofirst() {
+      postcodetest= "{{postcode}}"
+      var postcodetest = postcodetest.toUpperCase();
+
+      if (postcodetest!=""){
+
+      form2.style.display="block";
+      postcodegroup.style.display = "none";
+      document.getElementById('postcode').value = postcodetest;
+
+}
+ 
+  }
+
+</script>
+
+
+
+<script>
+  function update_address() { 
+    var postcodeV = document.getElementById('postcode').value;
+
+    var addressall = document.getElementById('AddressDropdown').value;
+
+    
+
+    if (addressall == "My address is not here"){
+        freekey.style.display = "block";
+        form2.style.display = "none";
+        
+
+    } else{
+
+     var addressalllist = addressall.split(",");
+    // form3.style.display = "block";
+    freekey.style.display = "none";
+    showaddress.style.display = "block";
+    
+
+
+      document.getElementById("line1").innerHTML = addressalllist[0];
+      document.getElementById("line2").innerHTML = addressalllist[1];
+      document.getElementById("line3").innerHTML = addressalllist[2];
+      document.getElementById("line4").innerHTML = addressalllist[3];
+      document.getElementById("line5").innerHTML = addressalllist[4];
+
+      if (addressalllist[2]==""){
+
+        line3.style.display = "none";
+      }
+    }
+    form2.style.display = "none";
+    
+    document.getElementById("newconf").value = addressalllist;
+
+  }
+</script>
+
+
+
+
+</header>
+
+<body onload="dofirst()">
+<main id="page-container" role="main">
+   <p style= "color:grey" class="form-hint" >
+      Stage 2 of 8
+    </p>
+
+  <p class="heading-medium">
+      The address on your driving licence
+    </p> 
+<div class="dwp-permission-group column-two-thirds">
+     <span class="heading-medium">Dr SAM MORGAN</span>
+
+  <div class="grid-row">
+
+      <div class="column-full"> 
+          <dd class="bold-small">122 Burns Crescent EDINBURGH  <span class="postcode">EH1 9GP</span>
+      
+        </dl>
+      </div>    
+  </div>
+</div>
+
+     
+
+
+<div class="grid-row"><br> </div>
+
+   
+    <div class="form-group " id="form2">
+       <p class="heading-medium" for="select">
+        Select an address</p>
+
+         <form method="get" action="find-confirm" class="form">
+        
+           <select class="form-control searchBox" name="udprn" id ="AddressDropdown"onchange="update_address()">
+      <option>{{result.length}} addresses were found</option>
+      {{#result}}
+
+        
+          <option value="{{line_1}},{{line_2}},{{line_3}},{{post_town}},{{postcode}}">{{line_1}} {{line_2}} {{post_town}}</option>
+
+         
+        
+
+      {{/result}}
+      <option value="My address is not here">My address is not here</option>
+      </select>
+
+      <br><br><input name="Findaddress" type="submit" class="button" value="Continue">
+  </div> 
+
+     
+      </div>
+       
+
+       </P>
+
+      <ul>
+       <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul> 
+      <!-- </form> -->
+    </div>
+  </div>
+  
+  </div>
+
+</div>
+
+ 
+       
+</main>    
+</body>
+    
+   
+
+
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

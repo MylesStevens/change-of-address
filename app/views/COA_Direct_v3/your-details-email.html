@@ -1,0 +1,74 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+</header>
+
+<main id="page-container" role="main">
+<p style= "color:grey" class="form-hint" >
+      Stage 4 of 8
+    </p>
+
+    <h1 class="form-title heading-medium">
+      Contact details
+    </h1>
+    <p> If you'd like a confirmation email of your change of address, tell us your email address here.
+
+ <form id="form1" action="send_address2" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-title heading-medium" for="drivernum">
+        
+        Your email address </label>
+        <span class="form-hint">
+          For example, 'you@mail.co.uk'
+           </span>
+           <input type="text" class="form-control" id="email"  name="email" autocomplete="off">
+          <br>
+      
+    </div>
+    
+
+     <p></p>
+       
+
+    <div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" >
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+    
+
+    
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
