@@ -43,40 +43,9 @@
 
 <script>
   function update_address() { 
-    var postcodeV = document.getElementById('postcode').value;
 
-    var addressall = document.getElementById('AddressDropdown').value;
+document.getElementById("findaddress").disabled = false;
 
-    
-
-    if (addressall == "My address is not here"){
-        freekey.style.display = "block";
-        form2.style.display = "none";
-        
-
-    } else{
-
-     var addressalllist = addressall.split(",");
-    // form3.style.display = "block";
-    freekey.style.display = "none";
-    showaddress.style.display = "block";
-    
-
-
-      document.getElementById("line1").innerHTML = addressalllist[0];
-      document.getElementById("line2").innerHTML = addressalllist[1];
-      document.getElementById("line3").innerHTML = addressalllist[2];
-      document.getElementById("line4").innerHTML = addressalllist[3];
-      document.getElementById("line5").innerHTML = addressalllist[4];
-
-      if (addressalllist[2]==""){
-
-        line3.style.display = "none";
-      }
-    }
-    form2.style.display = "none";
-    
-    document.getElementById("newconf").value = addressalllist;
 
   }
 </script>
@@ -134,7 +103,7 @@
       <option value="My address is not here">My address is not here</option>
       </select>
 
-      <br><br><input name="Findaddress" type="submit" class="button" value="Continue">
+      <br><br><input id="findaddress" name="Findaddress" type="submit" class="button" value="Continue" disabled>
   </div> 
 
      
