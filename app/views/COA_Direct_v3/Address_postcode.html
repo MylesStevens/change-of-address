@@ -39,6 +39,12 @@ document.getElementById('postcode').value = postcodetest;
 
   </script>
 
+  <script>
+  function enabler() {
+    document.getElementById('findaddress').disabled = false;
+  }
+  </script>
+
 
 
 <script>
@@ -167,10 +173,10 @@ document.getElementById('postcode').value = postcodetest;
         Postcode</label>
         <span class="form-hint">For example, 'ID1 1QD'</span>
         
-           <input type="text" style="text-transform:uppercase" class="form-control"  id="postcode" name="postcode"  autocomplete="off">
+           <input type="text" style="text-transform:uppercase" class="form-control"  id="postcode" name="postcode"  autocomplete="off" onkeyup="enabler()">
 
 
-          <br><br><input name="Findaddress" type="submit" class="button" value="Find address">
+          <br><br><input id="findaddress" name="Findaddress" type="submit" class="button" value="Find address" disabled>
 <br><br>
           <ul>
         <li><a href="javascript:history.go(-1);">Back</a></li>
