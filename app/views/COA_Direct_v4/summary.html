@@ -1,0 +1,160 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation_alpha}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+
+
+  
+
+<script>
+  function populatetext() { 
+    document.getElementById("address_1").innerHTML = "{{address1}}";
+    document.getElementById("address_2").innerHTML = "{{address2}}";
+    document.getElementById("address_3").innerHTML = "{{address3}}";
+    document.getElementById("address_4").innerHTML = "{{address4}}";
+    document.getElementById("address_5").innerHTML = "{{address5}}";
+
+    document.getElementById("mobile").innerHTML = "{{mobilenum}}";
+if ("{{mobilenum}}"==""){
+  document.getElementById("mobile").innerHTML = "You chose not to provide us with a mobile phone number ";
+}
+
+    document.getElementById("email").innerHTML = "{{email}}";
+if ("{{email}}"==""){
+  document.getElementById("email").innerHTML = "You chose not to provide us with an email address";
+}
+
+  }
+</script>
+
+
+
+
+<script>
+  function nextscreen() { 
+
+    window.location.href ="2COA_1_finished.html";
+
+  }
+  
+  </script>
+</header>
+<body onload="populatetext()">
+
+<main id="page-container" role="main">
+  <p style= "color:grey" class="form-hint" >
+      Stage 5 of 7
+    </p>
+
+  <h1 class="form-title heading-medium">
+
+     
+
+
+      Summary  
+    </h1>
+    <p>Please check that the details are correct before you continue</p><p>
+      If not, click ‘Edit’ against the incorrect information</P>
+
+    <div class="grid-row" style=" margin-left: 0px; margin-right: 5px">
+   
+    <dl>
+        <dt class="visually hidden">Name</dt>
+       <div><h2 class="heading-medium" >Your new address</h2></div>
+       <hr>
+       
+      
+         <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Address</dt>
+        </div>
+
+          <div class="column-third"> 
+            <dd id="address_1" class="bold-small" style=" margin: 0px 0px 0 0px"> </dd>
+            <dd id="address_2" class="bold-small" style=" margin: -10px 0px 0 0px">   </dd>
+             <dd id="address_3" class="bold-small" style=" margin: -10px 0px 0 0px">   </dd>
+              <dd id="address_4" class="bold-small" style=" margin: -10px 0px 0 0px">   </dd>
+               <dd id="address_5" class="bold-small"style=" margin: -10px 0px 0 0px">   </dd>
+          </div>
+
+          <div class="column-quarter" style=" padding-top: 5px" > 
+    
+          <dd ><a href="Address_postcode" > Edit </a></dd> 
+        </div> 
+      </div>
+       <hr>
+           <div class="grid-row">
+            <dt class="visually hidden">Name</dt>
+            <div class="grid-row" style=" margin-left: 15px; margin-right: 5px">
+            
+       <div ><h2 class="heading-medium" >Your contact details</h2><hr></div>
+     </div>
+       
+        <div class="column-quarter"> 
+          <dt class="light-small">Email address</dt>
+        </div>
+
+          <div class="column-third"> 
+            <dd id="email" class="bold-small" style="line-height: 125%; margin: 7px 0px 0 0px"> >  </dd>
+          </div>
+          <div class="column-quarter" > 
+    
+          <dd style="line-height: 125%; margin: 7px 0px 0 0px"><a href="your-details-email"  >Edit </a></dd> </div>
+        </div>
+         
+             <div class="grid-row">
+        <div class="column-quarter"> 
+          <dt class="light-small">Mobile phone number</dt>
+        </div>
+
+          <div class="column-third"> 
+            <dd id="mobile" class="bold-small" style="line-height: 125%; margin: 7px 0px 0 0px"> >   </dd>
+          </div>
+          <div class="column-quarter"> 
+    
+          <dt style="line-height: 125%; margin: 7px 0px 0 0px"><a href="your-details-email"  >Edit </a></dt> </div>
+
+
+
+        </div>
+   
+  </div>
+       </div>
+
+       <div class="grid-row">
+   <div class="column-full">
+
+    <form id="form1" action="Confirmation.html" method="get" class="form">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="{{address1}} {{mobilenum}} {{email}}" >
+        Continue
+    </button>
+
+     </div>
+       </div>
+
+       
+
+</main>
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

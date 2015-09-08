@@ -1,0 +1,133 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation3}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+<script>
+function showerrors() { 
+
+
+var emailV = "{{email}}";
+var mobileV ="{{mobilenum}}"
+
+
+
+
+if (emailV == ""  ) {}
+
+else{
+
+
+validation_message.style.display = "block";
+ document.getElementById("emailfieldname").className = "form-title heading-medium validation-summary-field-div";
+ document.getElementById("email").className = "validation-summary-input form-control";
+ document.getElementById("hint").className = "form-hint validation-summary-field-div";
+ document.getElementById("email").value = emailV;
+  document.getElementById("mobilenumber").value = mobileV;
+
+
+}
+}
+
+</script>
+
+</header>
+
+<body onload="showerrors()">
+
+<main id="page-container" role="main">
+<p style= "color:grey" class="form-hint" >
+      Stage 4 of 7
+    </p>
+<div class="grid-row"  >
+   <div class="column-full">
+    <h1 class="form-title heading-medium">
+      Contact details
+    </h1>
+    <p> If you'd like a confirmation email or text message of your change of address, tell us your email address and/or phone number here. <br>
+      If you do not wish confirmation of your change of address, leave the fields blank and click continue.
+
+ <form id="form1" action="send_address_sum" method="get" class="form">
+   
+    <div class="form-group">
+       <label class="form-title heading-medium" for="drivernum" id="emailfieldname">
+        
+        Your email address </label>
+        <span class="form-hint" id="hint">
+          For example, 'you@mail.co.uk'
+           </span>
+           <input type="text" class="form-control" id="email"  name="email" autocomplete="off">
+        
+    </div>
+    </div>
+    </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <p id="validation_message" class="heading-validation-message starthidden">Please enter a valid email address</p>
+    </div>
+  </div>
+
+<div class="grid-row"  >
+   <div class="column-full">
+    
+
+ 
+   
+    <div class="form-group">
+       <label class="form-title heading-medium" for="drivernum">
+        
+        Your mobile phone number </label>
+        <span class="form-hint">
+          For example, '07570123456'
+           </span>
+           <input type="text" maxlength="11" class="form-control" id="mobilenumber"  name="mobilenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off">
+          <br>
+      
+     </div>
+    </div>
+</div>
+
+     
+       
+
+    <div class="grid-row">
+   <div class="column-full">
+   <br>
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}">
+        Continue
+    </button>
+    
+    </form>  
+    
+      <ul>
+    
+       
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul>
+    </div>
+    </div>
+
+    
+</body>
+    
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
