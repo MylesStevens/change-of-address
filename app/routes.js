@@ -15,147 +15,147 @@ module.exports = {
 
 
 
-//        app.get('/COA_Direct_v4/find-postcode2', function (req, res) {
+       app.get('/COA_Direct_v4/find-postcode2', function (req, res) {
      
 
-//       var postcode = req.query.postcode;
+      var postcode = req.query.postcode;
 
 
 
-//       var idealPostcodes = require("ideal-postcodes")("ak_ibah3xqei01TCHgxRQqH36ilJkiqX")
+      var idealPostcodes = require("ideal-postcodes")("ak_ibah3xqei01TCHgxRQqH36ilJkiqX")
 
-//       idealPostcodes.lookupPostcode(postcode, function (error, results) {
-//         if (error) {
-//         // Implement some error handling
-//         }
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
 
-//         // console.log(results); 
-//         res.render('COA_Direct_v4/Address_dropdown', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+        // console.log(results); 
+        res.render('COA_Direct_v4/Address_dropdown', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
 
-//       });
+      });
         
-//     });
+    });
 
 
 
-//      app.get('/COA_Direct_v4/find-confirm', function (req, res) {
+     app.get('/COA_Direct_v4/find-confirm', function (req, res) {
      
 
-//       var addressall = req.query.udprn;
+      var addressall = req.query.udprn;
 
-//       if (addressall == "My address is not here"){
+      if (addressall == "My address is not here"){
         
-//         res.render('COA_Direct_v4/Address_manual', {'assetPath' : assetPath})
+        res.render('COA_Direct_v4/Address_manual', {'assetPath' : assetPath})
 
-//     } else{
+    } else{
 
 
 
-//       var addressalllist = addressall.split(",");
+      var addressalllist = addressall.split(",");
  
 
-//       var line1= addressalllist[0];
-//       var line2 = addressalllist[1];
-//       var line3= addressalllist[2];
-//       var line4 = addressalllist[3];
-//       var line5 = addressalllist[4];
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
       
 
       
 
      
-//         res.render('COA_Direct_v4/Address_confirm', {'assetPath' : assetPath, 'addressall1' : addressalllist, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5 })
+        res.render('COA_Direct_v4/Address_confirm', {'assetPath' : assetPath, 'addressall1' : addressalllist, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5 })
 
-// }
+}
     
         
-//     });
+    });
 
-//      app.get('/COA_Direct_v4/send_address', function (req, res) {
+     app.get('/COA_Direct_v4/send_address', function (req, res) {
 
-//       var addressall1 = req.query.newconf;
+      var addressall1 = req.query.newconf;
 
-//         res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+        res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
 
-//       });
+      });
 
 
 
-//     app.get('/COA_Direct_v4/send_address_sum', function (req, res) {
+    app.get('/COA_Direct_v4/send_address_sum', function (req, res) {
 
-//       var addressall1 = req.query.sub;
+      var addressall1 = req.query.sub;
 
-//       var email1 = req.query.email;
+      var email1 = req.query.email;
 
-//       var re = /\S+@\S+\.\S+/;
+      var re = /\S+@\S+\.\S+/;
 
-//       var addressalllist = addressall1.split(",");
+      var addressalllist = addressall1.split(",");
  
 
-//       var line1= addressalllist[0];
-//       var line2 = addressalllist[1];
-//       var line3= addressalllist[2];
-//       var line4 = addressalllist[3];
-//       var line5 = addressalllist[4];
-//       // var email1 = addressalllist[5];
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
+      // var email1 = addressalllist[5];
 
-//       var mobile = req.query.mobilenumber;
-
-
-
-
-//  if (email1  == ""){
-//               res.render('COA_Direct_v4/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
-
-//                }    
+      var mobile = req.query.mobilenumber;
 
 
 
-// if (re.test(email1) == false){
+
+ if (email1  == ""){
+              res.render('COA_Direct_v4/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+
+               }    
+
+
+
+if (re.test(email1) == false){
   
-//   res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1, 'mobilenum' : mobile, 'email' : email1})
+  res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1, 'mobilenum' : mobile, 'email' : email1})
 
-// } else {
+} else {
 
-//         res.render('COA_Direct_v4/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
-// }
-//       });
+        res.render('COA_Direct_v4/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+}
+      });
     
 
 
-//       app.get('/COA_Direct_v4/sendaddress_freekey1', function (req, res) {
+      app.get('/COA_Direct_v4/sendaddress_freekey1', function (req, res) {
 
       
 
-//       var line1= req.query.A1;
-//       if (line1 == "undefined"){
-//         line1=" ";
-//       }
-//       var line2 = req.query.A2;
-//       if (line2 == "undefined"){
-//         line2=" ";
-//       }
-//       var line3= req.query.A3;
-//       if (line3 == "undefined"){
-//         line3="";
-//       }
-//       var line4 = req.query.A4;
-//       if (line4 == "undefined"){
-//         line4=" ";
-//       }
-//       var line5 = req.query.PC;
-//       if (line5 == "undefined"){
-//         line5=" ";
-//       }
+      var line1= req.query.A1;
+      if (line1 == "undefined"){
+        line1=" ";
+      }
+      var line2 = req.query.A2;
+      if (line2 == "undefined"){
+        line2=" ";
+      }
+      var line3= req.query.A3;
+      if (line3 == "undefined"){
+        line3="";
+      }
+      var line4 = req.query.A4;
+      if (line4 == "undefined"){
+        line4=" ";
+      }
+      var line5 = req.query.PC;
+      if (line5 == "undefined"){
+        line5=" ";
+      }
 
-//       var addressall1 = line1+","+line2+","+line3+","+line4+","+line5
+      var addressall1 = line1+","+line2+","+line3+","+line4+","+line5
 
       
-//   res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+  res.render('COA_Direct_v4/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
         
 
-//       });  
-// ///
+      });  
+///
 
 
 
