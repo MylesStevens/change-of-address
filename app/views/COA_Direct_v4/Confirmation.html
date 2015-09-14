@@ -41,14 +41,7 @@
 
   
 
-<script>
-  function nextscreen() { 
 
-    window.location.href ="EndScreen.html?address1={{address1}} ";
-
-  }
-  
-  </script>
   <script>
   function checkboxclick(){
     if (document.getElementById('am_2').checked == false){
@@ -59,6 +52,25 @@
 {document.getElementById('am_2').checked = false;
 document.getElementById('continue').disabled = false;}
 }
+  </script>
+
+
+  <script>
+  function nextscreen() { 
+
+    window.location.href ="EndScreen.html?address1={{address1}} ";
+
+  }
+  
+  </script>
+
+  <script>
+  function cancel() { 
+
+    window.location.href ="Landing_page.html";
+
+  }
+  
   </script>
 </header>
 
@@ -126,6 +138,12 @@ and a fine of up to £1,000 or imprisonment for a period of up to two years or b
 <div class="grid-row">
 <div class="column-half">
  <input name="continue" id="continue" type="button" disabled class="button" value="Confirm" onclick="nextscreen()">  
+
+ <input name="cancel" id="cancel" type="button"  class="button-secondary" value="Cancel" onclick="cancel()">
+
+   <ul>
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul> 
 
 <!-- <form id="form1" action="EndScreen.html" method="get" class="form">
    <br>
