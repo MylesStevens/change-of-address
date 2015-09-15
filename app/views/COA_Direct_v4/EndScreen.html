@@ -13,13 +13,47 @@
 {{$content}}
 <header class="page-header">
 
+<script>
+function whichmessage() {
+
+emailV= "{{email}}"
+
+mobileV= "{{mobile}}"
 
 
+if (emailV=="" & mobileV!=""){
+
+  document.getElementById("message").innerHTML = "You will shortly receive a text message confirming your application with the reference number as shown below";
+
+} 
+
+if (emailV!="" & mobileV==""){
+
+  document.getElementById("message").innerHTML = "You will shortly receive an email confirming your application with the reference number shown below";
+
+} 
+
+if (emailV!="" & mobileV!=""){
+
+  document.getElementById("message").innerHTML = "You will shortly receive an email and a text message confirming your application with the reference number shown below";
+
+} 
+
+if (emailV=="" & mobileV==""){
+
+  document.getElementById("message").innerHTML = "Please make a note of the reference number shown below, in case you need to contact us about your change of address";
+
+} 
+
+
+}
+
+</script>
   
 
 </header>
 
-
+<body onload="whichmessage()">
 <main id="page-container" role="main">
 <p style= "color:grey" class="form-hint" >
       Stage 7 of 7
@@ -41,8 +75,11 @@
         <p class="heading-medium" style="color: white; ">
          Your change of address has been processed
         </p> 
-        <p class="heading-small" style="color: white; ">
-         You will shortly receive a confirmation email with your application reference number as shown below.
+        <p class="heading-small" style="color: white; " id="message">
+          {{email}} <br>
+          {{mobile}}
+
+         <!-- You will shortly receive a confirmation email with your application reference number as shown below -->
         </p> 
         <br>
         <br>
@@ -138,6 +175,7 @@
 </div>
 
 </main>
+</body>
 
 
 

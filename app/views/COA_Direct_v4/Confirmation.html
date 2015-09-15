@@ -58,7 +58,7 @@ document.getElementById('continue').disabled = false;}
   <script>
   function nextscreen() { 
 
-    window.location.href ="EndScreen.html?address1={{address1}} ";
+    window.location.href ="EndScreen.html";
 
   }
   
@@ -137,20 +137,26 @@ and a fine of up to £1,000 or imprisonment for a period of up to two years or b
 <p><br></p>
 <div class="grid-row">
 <div class="column-half">
- <input name="continue" id="continue" type="button" disabled class="button" value="Confirm" onclick="nextscreen()">  
+<!--  <input name="continue" id="continue" type="button" disabled class="button" value="Confirm" onclick="nextscreen()">  
 
  <input name="cancel" id="cancel" type="button"  class="button-secondary" value="Cancel" onclick="cancel()">
 
    <ul>
         <li><a href="javascript:history.go(-1);">Back</a></li>
-      </ul> 
+      </ul>  -->
 
-<!-- <form id="form1" action="EndScreen.html" method="get" class="form">
+
+
+<form id="form1" action="send_to_end" method="get" class="form">
    <br>
-      <button type="submit" id="sub" class="button" name = "confirmbut" id="confirmbut"  value="{{address1}} {{mobilenum}} {{email}}" >
-        Confirm
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" >
+        Continue
     </button>
-</form> -->
+    <input name="cancel" id="cancel" type="button"  class="button-secondary" value="Cancel" onclick="cancel()">
+
+   <ul>
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul>
 
 </div>
 

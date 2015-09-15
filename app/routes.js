@@ -155,6 +155,31 @@ if (re.test(email1) == false){
         
 
       });  
+/// send details to declaration page ///
+
+        app.get('/COA_Direct_v4/send_to_dec', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+        res.render('COA_Direct_v4/Confirmation', {'assetPath' : assetPath, 'addressall1' : addressall1})
+
+      });
+
+        /// send details to end page ///
+
+        app.get('/COA_Direct_v4/send_to_end', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var addressalllist = addressall1.split(",");
+ 
+
+      var mobile= addressalllist[0];
+      var email = addressalllist[1];
+
+        res.render('COA_Direct_v4/EndScreen', {'assetPath' : assetPath, 'mobile' : mobile, 'email' : email})
+
+      });
 ///
 
 

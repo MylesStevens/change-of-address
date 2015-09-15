@@ -22,71 +22,12 @@
 {{$content}}
 <header class="page-header">
 
-  <script>
-  function dofirst() {
-postcodetest= "{{postcode}}"
-var postcodetest = postcodetest.toUpperCase();
-
-if (postcodetest!=""){
-
-form2.style.display="block";
-postcodegroup.style.display = "none";
-document.getElementById('postcode').value = postcodetest;
-
-}
- 
-  }
-
-  </script>
 
 
 
-<script>
-  function update_address() { 
-    var postcodeV = document.getElementById('postcode').value;
-
-    var addressall = document.getElementById('AddressDropdown').value;
-
-    
-
-    if (addressall == "My address is not here"){
-        freekey.style.display = "block";
-        form2.style.display = "none";
-        
-
-    } else{
-
-     var addressalllist = addressall.split(",");
-    // form3.style.display = "block";
-    freekey.style.display = "none";
-    showaddress.style.display = "block";
-    
 
 
-      document.getElementById("line1").innerHTML = addressalllist[0];
-      document.getElementById("line2").innerHTML = addressalllist[1];
-      document.getElementById("line3").innerHTML = addressalllist[2];
-      document.getElementById("line4").innerHTML = addressalllist[3];
-      document.getElementById("line5").innerHTML = addressalllist[4];
 
-      if (addressalllist[2]==""){
-
-        line3.style.display = "none";
-      }
-    }
-    form2.style.display = "none";
-    
-    document.getElementById("newconf").value = addressalllist;
-
-  }
-</script>
-
-<script>
-  function shownext3() { 
-    form4.style.display = "block";
-
-  }
-</script>
 
 <script>
    function reset() { 
@@ -105,34 +46,19 @@ document.getElementById('postcode').value = postcodetest;
   }
  </script>
 
-  <script>
-  function showsupp() { 
-    supinfo.style.display = "block";
-    supquest.style.display = "none";
-    document.getElementById('supinfofield').focus()
-    
-
+ <script>
+  function enabler() {
+    document.getElementById('newconf2').disabled = false;
   }
-</script>
+  </script>
 
-<script>
-  function supenter() { 
-    var s1 = document.getElementById("supinfofield").value;
-    supinfo.style.display = "none";
 
-    document.getElementById("flat1").innerHTML = s1;
-    flat1.style.display = "block";
 
- 
-     
-
-  }
-</script>
 
 
 </header>
 
-<body onload="dofirst()">
+<body>
 <main id="page-container" role="main">
   <p style= "color:grey" class="form-hint" >
       Stage 3 of 7
@@ -173,7 +99,7 @@ document.getElementById('postcode').value = postcodetest;
 
         <label class="form-label" for="Adress">
       Address </label>
-      <p><input type="text" class="form-control" id="Address1" name="A1" maxlength="30"></p>
+      <p><input type="text" class="form-control" id="Address1" name="A1" maxlength="30" onkeyup="enabler()"></p>
       
       <p><input type="text" class="form-control" id="Address2" name="A2" maxlength="30"></p>
   
@@ -189,10 +115,10 @@ document.getElementById('postcode').value = postcodetest;
      <div class="grid-row">
     <div class="column-full">
     
-
+<p><input id="newconf2" name="newconf2" type="submit" class="button" value="Continue" disabled>
     
 
-    <p><button type="submit" name ="newconf2" id="newconf2" class="button">Continue </button><a href="javascript:reset();">Reset this page</a>
+     <a href="javascript:reset();">Reset this page</a>
     </form>
 
 
