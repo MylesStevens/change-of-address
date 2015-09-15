@@ -47,10 +47,10 @@
     if (document.getElementById('am_2').checked == false){
 
   document.getElementById('am_2').checked = true;
-  document.getElementById('continue').disabled = false;}
+  document.getElementById('sub').disabled = false;}
   else
 {document.getElementById('am_2').checked = false;
-document.getElementById('continue').disabled = false;}
+document.getElementById('sub').disabled = true;}
 }
   </script>
 
@@ -149,10 +149,10 @@ and a fine of up to £1,000 or imprisonment for a period of up to two years or b
 
 <form id="form1" action="send_to_end" method="get" class="form">
    <br>
-      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" >
+      <button type="submit" id="sub" class="button" name = "sub" value="{{addressall1}}" disabled>
         Continue
     </button>
-    <input name="cancel" id="cancel" type="button"  class="button-secondary" value="Cancel" onclick="cancel()">
+    <input name="cancel" id="cancel" type="button"  class="button-secondary" value="Cancel" onclick="cancel()" >
 
    <ul>
         <li><a href="javascript:history.go(-1);">Back</a></li>
