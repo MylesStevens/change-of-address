@@ -8,10 +8,189 @@ module.exports = {
       res.render('index', {'assetPath' : assetPath});
     });
 
+
+       /*-----------------------------------------------------*/
+    
+
+    /*-------------version5----------------------------------------*/
+
+
+
+       app.get('/COA_Direct_v5/find-postcode2', function (req, res) {
+     
+
+      var postcode = req.query.postcode;
+
+
+
+      var idealPostcodes = require("ideal-postcodes")("ak_ibah3xqei01TCHgxRQqH36ilJkiqX")
+
+      idealPostcodes.lookupPostcode(postcode, function (error, results) {
+        if (error) {
+        // Implement some error handling
+        }
+
+        // console.log(results); 
+        res.render('COA_Direct_v5/Address_dropdown', {'assetPath' : assetPath, 'postcode' : postcode, 'result' : results})
+
+      });
+        
+    });
+
+
+
+     app.get('/COA_Direct_v5/find-confirm', function (req, res) {
+     
+
+      var addressall = req.query.udprn;
+
+      if (addressall == "My address is not here"){
+        
+        res.render('COA_Direct_v5/Address_manual', {'assetPath' : assetPath})
+
+    } else{
+
+
+
+      var addressalllist = addressall.split(",");
+ 
+
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
+      
+
+      
+
+     
+        res.render('COA_Direct_v5/Address_confirm', {'assetPath' : assetPath, 'addressall1' : addressalllist, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5 })
+
+}
+    
+        
+    });
+
+     app.get('/COA_Direct_v5/send_address', function (req, res) {
+
+      var addressall1 = req.query.newconf;
+
+        res.render('COA_Direct_v5/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+
+      });
+
+
+
+    app.get('/COA_Direct_v5/send_address_sum', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var email1 = req.query.email;
+
+      var re = /\S+@\S+\.\S+/;
+
+      var addressalllist = addressall1.split(",");
+ 
+
+      var line1= addressalllist[0];
+      var line2 = addressalllist[1];
+      var line3= addressalllist[2];
+      var line4 = addressalllist[3];
+      var line5 = addressalllist[4];
+      // var email1 = addressalllist[5];
+
+      var mobile = req.query.mobilenumber;
+
+
+
+
+ if (email1  == ""){
+              res.render('COA_Direct_v5/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+
+               }    
+
+
+
+if (re.test(email1) == false){
+  
+  res.render('COA_Direct_v5/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1, 'mobilenum' : mobile, 'email' : email1})
+
+} else {
+
+        res.render('COA_Direct_v5/summary', {'assetPath' : assetPath, 'address1' : line1, 'address2' : line2, 'address3' : line3, 'address4' : line4, 'address5' : line5,  'mobilenum' : mobile, 'email' : email1})
+}
+      });
+    
+
+
+      app.get('/COA_Direct_v5/sendaddress_freekey1', function (req, res) {
+
+      
+
+      var line1= req.query.A1;
+      if (line1 == "undefined"){
+        line1=" ";
+      }
+      var line2 = req.query.A2;
+      if (line2 == "undefined"){
+        line2=" ";
+      }
+      var line3= req.query.A3;
+      if (line3 == "undefined"){
+        line3="";
+      }
+      var line4 = req.query.A4;
+      if (line4 == "undefined"){
+        line4=" ";
+      }
+      var line5 = req.query.PC;
+      if (line5 == "undefined"){
+        line5=" ";
+      }
+
+      var addressall1 = line1+","+line2+","+line3+","+line4+","+line5
+
+      
+  res.render('COA_Direct_v5/your-details-email', {'assetPath' : assetPath, 'addressall1' : addressall1})
+        
+
+      });  
+/// send details to declaration page ///
+
+        app.get('/COA_Direct_v5/send_to_dec', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+        res.render('COA_Direct_v5/Confirmation', {'assetPath' : assetPath, 'addressall1' : addressall1})
+
+      });
+
+        /// send details to end page ///
+
+        app.get('/COA_Direct_v5/send_to_end', function (req, res) {
+
+      var addressall1 = req.query.sub;
+
+      var addressalllist = addressall1.split(",");
+ 
+
+      var mobile= addressalllist[0];
+      var email = addressalllist[1];
+
+        res.render('COA_Direct_v5/EndScreen', {'assetPath' : assetPath, 'mobile' : mobile, 'email' : email})
+
+      });
+///
+
+
+
+
+
         /*-----------------------------------------------------*/
     
 
-    /*-----------------------------------------------------*/
+    /*-------------version4----------------------------------------*/
 
 
 

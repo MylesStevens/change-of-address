@@ -1,0 +1,176 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+  <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/postcodes.min.js"></script>
+
+  <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation_alpha}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<header class="page-header">
+
+
+
+
+
+
+
+
+<script>
+   function reset() { 
+
+    window.location.href ="Address_manual.html";
+
+  }
+  
+</script>
+
+  <script>
+  function nextscreen() { 
+
+    window.location.href ="your-details-email.html";
+
+  }
+ </script>
+
+ <script>
+  function enabler() {
+    document.getElementById('newconf2').disabled = false;
+  }
+  </script>
+
+
+
+
+
+</header>
+
+<body>
+<main id="page-container" role="main">
+  <p style= "color:grey" class="form-hint" >
+      Stage 3 of 7
+    </p>
+
+  <p class="heading-medium">
+      The address on your current driving licence
+    </p> 
+<div class="dwp-permission-group column-half">
+     <span class="heading-small">Dr SAM MORGAN</span>
+
+  <div class="grid-row">
+
+      <div class="column-full"> 
+          <dd class="font-small">122 Burns Crescent 
+            <br>EDINBURGH  
+            <br><span class="postcode">EH1 9GP</span>
+      
+        </dl>
+      </div>    
+  </div>
+</div>
+
+
+
+
+<!-- ////////////freekey////////////// -->
+<div  class="grid-row " id="freekey">
+  <div class="column-full">
+    
+      <p class="heading-medium" for="Adress">
+        Enter your address manually
+        
+      
+      <br>
+      <div class="validation-wrapper">
+        <Form action="sendaddress_freekey1" method="GET">         
+
+        <label class="form-label" for="Adress">
+      Address </label>
+      <p><input type="text" class="form-control" id="Address1" name="A1" maxlength="30" onkeyup="enabler()"></p>
+      
+      <p><input type="text" class="form-control" id="Address2" name="A2" maxlength="30"></p>
+  
+      <p><input type="text" class="form-control" id="Address3" name="A3" maxlength="30"></p>
+      <label class="form-label" for="Adress">
+      Post town </label>
+      <p><input type="text" class="form-control" id="City" name="A4" maxlength="30"></p>
+      <label class="form-label" for="Adress">
+      Postcode </label>
+      <p><input type="text" class="form-control" id="PCODE" name="PC" maxlength="8"></p>
+    </div>
+
+     <div class="grid-row">
+    <div class="column-full">
+    
+<p><input id="newconf2" name="newconf2" type="submit" class="button" value="Continue" disabled>
+    
+
+     <a href="javascript:reset();">Reset this page</a>
+    </form>
+
+
+      
+
+      <ul>
+        <li><a href="javascript:history.go(-1);">Back</a></li>
+      </ul> 
+      <!-- </form>
+    </div>
+  </div>
+  
+  </div>
+
+
+ -->
+  </div>
+
+</div>
+
+
+
+
+
+
+ 
+<!--  </form> -->
+       
+</main>    
+</body>
+    
+ <!--  <div  id="supquest">
+
+      <input name="Supplementaryinformation" type="button" class="button-secondary" value="Add supplementary information" onclick="showsupp(); return false;">
+
+
+
+         <span class="form-hint">
+          Adds an extra line to the address for a flat number or house name etc.
+          
+        </span>
+  </div> -->    
+
+
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

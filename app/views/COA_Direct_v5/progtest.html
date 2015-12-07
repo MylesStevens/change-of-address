@@ -1,0 +1,73 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+
+
+
+
+    <h1 class="form-title heading-medium">
+   Progressive disclosure test
+    </h1>
+ <div class="grid-row">
+
+    <div class="column-third">
+      
+<label class="block-label" for="checkbox-1">
+      <input id="checkbox-1" type="checkbox" value="car" onclick="showcar()">
+      Fancy brakes</label>
+
+    
+
+      <details>
+
+    <summary><span class="summary">What does this mean?</span></summary>
+    <div class="panel-indent">
+
+      <p>
+        If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+      </p>
+
+      <p>
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+      </p>
+
+    </div>
+
+  </details>
+
+    </div>
+
+    <div class="column-third">
+      <p>Content</p>
+    </div>
+
+    <div class="column-third">
+      <p>Content</p>
+    </div>
+
+  </div>
+ 
+
+
+</main>
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
